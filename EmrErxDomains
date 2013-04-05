@@ -1,0 +1,57 @@
+class ErxAllergy {
+    String partnerid        //id of the record in partner's system
+    String patientid
+    String name
+    String ndcid
+    String rxnormid
+    String rxnormidtype
+    String partnerdrugid    //id of drug the patient is allergic to in the partner's system
+    String partnergroupid
+    String reaction
+    String onsetdate
+    String status
+    
+    static constraints = {
+        partnerid(nullable:false)
+        patientid(nullable:false)
+        name(nullable:false)
+        reaction(nullable:false)
+        onsetdate(nullable:false)
+        ndcid(nullable:true)
+        rxnormid(nullable:true)
+        rxnormidtype(nullable:true)
+        partnerdrugid(nullable:true)
+        partnergroupid(nullable:true)
+        status(nullable:false)
+    }
+}
+
+class ErxDrug {
+    String partnerdrugid        //id of the drug in the partner system
+    String ndcid
+    String rxnormid
+    String rxnormidtype
+    String description
+    String brandname
+    String genericname
+    String brandtype
+    String schedule
+    String route
+    String form
+    String strength
+
+    static constraints = {
+        partnerdrugid(nullable:false)
+        ndcid(nullable:true)
+        rxnormid(nullable:true)
+        rxnormidtype(nullable:true)
+        description(nullable:true)
+        brandname(nullable:true)
+        genericname(nullable:true)
+        brandtype(nullable:true)
+        schedule(nullable:true)
+        route(nullable:true)
+        form(nullable:true)
+        strength(nullable:true)
+    }
+}

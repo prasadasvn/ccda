@@ -1,0 +1,7 @@
+Code Code System Print Name
+449868002  Current every day smoker
+428041000124106  Current some day smoker
+8517006  Former smoker
+266919005  Never smoker (Never Smoked)
+77176002  Smoker, current status unknown
+266927001 Unknown if ever smoked

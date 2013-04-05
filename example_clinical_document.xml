@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3" xsi:schemaLocation="urn:hl7-org:v3 CDA.xsd">
+    <realmCode code="US"/>
+    <typeId root="2.16.840.1.113883.1.3"/>
+    <templateId root="2.16.840.1.113883.10.20.22.1.1"/>
+    <templateId root="2.16.840.1.113883.10.20.22.1.1"/>
+    <id root="MDHT" extension="835599148"/>
+    <code code="1639195646"/>
+    <title>TEXT FOR TITLE</title>
+    <effectiveTime/>
+    <confidentialityCode codeSystem="2.16.840.1.113883.5.25" codeSystemName="ConfidentialityCode"/>
+    <setId root="MDHT" extension="61aeaeb4-9d26-4a66-bfc3-807e712f2d98"/>
+    <versionNumber value="1"/>
+    <recordTarget>
+        <typeId root="2.16.840.1.113883.1.3"/>
+        <patientRole/>
+    </recordTarget>
+    <author>
+        <typeId root="2.16.840.1.113883.1.3"/>
+        <time/>
+        <assignedAuthor/>
+    </author>
+    <custodian/>
+    <component>
+        <structuredBody>
+            <component>
+                <section/>
+            </component>
+            <component>
+                <section/>
+            </component>
+            <component>
+                <section/>
+            </component>
+            <component>
+                <section>
+                    <typeId root="2.16.840.1.113883.1.3"/>
+                    <templateId root="2.16.840.1.113883.10.20.22.2.3.1"/>
+                    <templateId root="2.16.840.1.113883.10.20.22.2.3"/>
+                    <templateId root="2.16.840.1.113883.10.20.22.2.3.1"/>
+                    <id root="MDHT" extension="1108813697"/>
+                    <code code="30954-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Relevant diagnostic tests and/or laboratory data"/>
+                    <title>TEXT FOR TITLE</title>
+                    <entry>
+                        <organizer moodCode="EVN">
+                            <typeId root="2.16.840.1.113883.1.3"/>
+                            <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+                            <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+                            <id root="MDHT" extension="733101201"/>
+                            <code code="181587775"/>
+                            <statusCode code="completed"/>
+                            <effectiveTime>
+                                <low value="2012"/>
+                                <high value="2012"/>
+                            </effectiveTime>
+                            <component>
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                                </observation>
+                            </component>
+                        </organizer>
+                    </entry>
+                </section>
+            </component>
+            <component>
+                <section/>
+            </component>
+            <component>
+                <section>
+                    <typeId root="2.16.840.1.113883.1.3"/>
+                    <templateId root="2.16.840.1.113883.10.20.22.2.10"/>
+                    <templateId root="2.16.840.1.113883.10.20.22.2.10"/>
+                    <id root="MDHT" extension="729812640"/>
+                    <code code="18776-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Treatment plan"/>
+                    <title>TEXT FOR TITLE</title>
+                    <entry>
+                        <act/>
+                    </entry>
+                    <entry>
+                        <encounter/>
+                    </entry>
+                    <entry>
+                        <observation/>
+                    </entry>
+                </section>
+            </component>
+            <component>
+                <section>
+                    <typeId root="2.16.840.1.113883.1.3"/>
+                    <templateId root="2.16.840.1.113883.10.20.22.2.7.1"/>
+                    <templateId root="2.16.840.1.113883.10.20.22.2.7"/>
+                    <templateId root="2.16.840.1.113883.10.20.22.2.7.1"/>
+                    <id root="MDHT" extension="1319401564"/>
+                    <code code="47519-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of procedures"/>
+                    <title>TEXT FOR TITLE</title>
+                    <entry>
+                        <procedure classCode="PROC">
+                            <typeId root="2.16.840.1.113883.1.3"/>
+                            <templateId root="2.16.840.1.113883.10.20.22.4.14"/>
+                            <templateId root="2.16.840.1.113883.10.20.22.4.14"/>
+                            <id root="MDHT" extension="1710321247"/>
+                            <code code="1430987554"/>
+                            <effectiveTime>
+                                <low value="2012"/>
+                                <high value="2012"/>
+                            </effectiveTime>
+                            <priorityCode codeSystem="2.16.840.1.113883.5.7" codeSystemName="ActPriority"/>
+                            <targetSiteCode codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT"/>
+                        </procedure>
+                    </entry>
+                </section>
+            </component>
+            <component>
+                <section/>
+            </component>
+            <component>
+                <section/>
+            </component>
+            <component>
+                <section/>
+            </component>
+            <component>
+                <section/>
+            </component>
+            <component>
+                <section/>
+            </component>
+            <component>
+                <section>
+                    <typeId root="2.16.840.1.113883.1.3"/>
+                    <templateId root="2.16.840.1.113883.10.20.22.2.9"/>
+                    <templateId root="2.16.840.1.113883.10.20.22.2.9"/>
+                    <id root="MDHT" extension="335524027"/>
+                    <code code="51847-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="ASSESSMENT AND PLAN"/>
+                    <title>TEXT FOR TITLE</title>
+                    <entry>
+                        <procedure/>
+                    </entry>
+                    <entry>
+                        <substanceAdministration classCode="SBADM"/>
+                    </entry>
+                    <entry>
+                        <supply classCode="SPLY"/>
+                    </entry>
+                    <entry>
+                        <observation/>
+                    </entry>
+                </section>
+            </component>
+            <component>
+                <section/>
+            </component>
+            <component>
+                <section>
+                    <typeId root="2.16.840.1.113883.1.3"/>
+                    <templateId root="2.16.840.1.113883.10.20.22.2.17"/>
+                    <templateId root="2.16.840.1.113883.10.20.22.2.17"/>
+                    <id root="MDHT" extension="827530785"/>
+                    <code code="29762-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Social history"/>
+                    <title>TEXT FOR TITLE</title>
+                    <entry>
+                        <observation classCode="OBS" moodCode="EVN">
+                            <typeId root="2.16.840.1.113883.1.3"/>
+                            <templateId root="2.16.840.1.113883.10.22.4.78"/>
+                            <templateId root="2.16.840.1.113883.10.20.22.4.85"/>
+                            <id root="MDHT" extension="1083714572"/>
+                            <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" codeSystemName="HL7ActCode" displayName="Assertion"/>
+                            <statusCode code="completed"/>
+                            <effectiveTime>
+                                <low value="2012"/>
+                                <high value="2012"/>
+                            </effectiveTime>
+                        </observation>
+                    </entry>
+                </section>
+            </component>
+        </structuredBody>
+    </component>
+</ClinicalDocument>

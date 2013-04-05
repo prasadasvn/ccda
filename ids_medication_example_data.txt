@@ -1,0 +1,198 @@
+  String brandName
+  String genericName
+  String strength
+  String dose
+  String doseUnit
+  String doseTiming
+  String doseOther
+  String route
+
+  String startDate
+  String stopDate
+  String patientNotes
+  Date dateCreated
+  boolean isOcular
+  
+  String ndcId		//ndcid
+  String fdbmId		//First data bank id
+  String form
+  
+  String erxProviderUsername
+
+
+ count |            brand_name            
+-------+----------------------------------
+   857 | lisinopril
+   789 | metformin
+   745 | simvastatin
+   734 | amlodipine
+
+
+ count |          generic_name           
+-------+---------------------------------
+  1075 | 
+  1074 | prednisolone acetate
+   840 | lisinopril
+   778 | simvastatin
+   774 | metformin
+   759 | amlodipine
+
+
+
+ count |            strength            
+-------+--------------------------------
+  2490 | 10 mg
+  2233 | 20 mg
+  1926 | 40 mg
+  1667 | 25 mg
+  1653 | 
+  1606 | 1%
+  1459 | 5 mg
+  1425 | 500 mg
+  1358 | 50 mg
+  1325 | 100 mg
+   723 | 0.005%
+   641 | 150 mg
+   596 | 300 mg
+   596 | 0.5%
+   520 | 100 unit/mL
+   484 | 0.1%
+   462 | 75 mg
+   427 | 1 mg
+   373 | 200 mg
+   367 | 30 mg
+   366 | 0.05%
+   362 | 4 mg
+
+
+ count | dose  
+-------+-------
+ 32436 | 
+  5681 | 1
+    69 | 2
+    48 | 1/4
+    30 | 3
+    11 | 1/2
+     6 | 4
+     3 | 6
+     3 | 1 1/2
+     3 | 10
+     3 | 250
+     3 | 5
+     2 | apply
+     2 | 15
+     2 | 7
+     2 | 1.5
+     1 | 60
+     1 | 2.5
+     1 | 500
+     1 | 8
+     1 | 80
+     1 | 200
+
+ count |   dose_unit    
+-------+----------------
+ 32370 | 
+  4362 | drop
+   813 | tablet
+   383 | a small amount
+   241 | capsule
+    27 | puff
+    23 | dropperful
+    17 | ml
+    16 | as directed
+    15 | spray
+    13 | mg
+     8 | unit
+     4 | teaspoon
+     2 | insert
+     2 | liberally
+     2 | mcg
+     2 | syringe
+     1 | strip
+     1 | bead
+     1 | vial
+     1 | film
+     1 | kit
+     1 | tablespoon
+     1 | gram
+     1 | bottle
+     1 | tube
+     1 | packet
+(27 rows)
+
+
+ count |          dose_timing          
+-------+-------------------------------
+ 32585 | 
+  1668 | twice a day
+  1081 | four times a day
+   929 | at bedtime
+   855 | once a day
+   735 | three times a day
+    97 | every night
+    95 | as directed
+    88 | every morning
+    27 | every two hours
+    25 | every four hours
+    24 | every two hours while awake
+    18 | single dose
+    18 | five times a day
+    17 | every six hours
+     7 | every four hours while awake
+     6 | every other day
+     5 | every three hours
+     5 | every three hours while awake
+     5 | every four to six hours
+     5 | once a week
+     5 | every twelve hours
+     3 | every eight hours
+     3 | three times a week
+     2 | once a month
+     1 | once every two weeks
+     1 | every three days
+(27 rows)
+
+
+ count |       route        
+-------+--------------------
+ 32539 | 
+  2212 | into both eyes
+  1097 | into left eye
+  1078 | into right eye
+   931 | by mouth
+   144 | in both eyes
+    95 | in left eye
+    58 | in right eye
+    43 | to affected area
+    29 | to skin
+    25 | as directed
+    22 | into affected eye
+    14 | into both nostrils
+    13 | subcutaneously
+     3 | using inhaler
+     2 | in eye
+     1 | intramuscularly
+     1 | into one nostril
+     1 | in mouth
+     1 | into vagina
+     1 | into affected ear
+(21 rows)
+
+ count |     dose_other     
+-------+--------------------
+ 34137 | 
+  3934 | as directed
+   208 | as needed
+    28 | as needed for pain
+     3 | with meals
+
+ count |       start_date        
+-------+-------------------------
+ 17468 | 
+    90 | 11/28/2011 00:00:00 EST
+    88 | 01/09/2012 00:00:00 EST
+    75 | 11/17/2011 00:00:00 EST
+    70 | 11/08/2011 00:00:00 EST
+    69 | 01/31/2012 00:00:00 EST
+    65 | 01/12/2012 00:00:00 ES

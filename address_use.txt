@@ -1,0 +1,18 @@
+Value Set: P ostalAddressUse 2.16.840.1.113883.1.11.10637 ST ATIC 2005-05-01
+Code System(s):
+Code
+AddressUse 2.16.840.1.113883.5.1119
+Code System
+Print Name
+BAD bad address
+DIR AddressUse direct
+H AddressUse home address
+HP AddressUse primary home
+HV AddressUse vacation home
+PHYS AddressUse physical visit address
+PST AddressUse postal address
+PUB AddressUse public
+TMP AddressUse temporary
+WP  AddressUse AddressUse w ork place
+
+

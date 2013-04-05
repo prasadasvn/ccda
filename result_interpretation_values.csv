@@ -1,0 +1,24 @@
+Permissible Value,Domain Meaning Name
+Abnormal,A
+Abnormal alert,AA
+High,H
+High alert,HH
+High alert,HH
+Low,L
+Low alert,LL
+Low alert,LL
+Normal,N
+above high threshold,HX
+below low threshold,LX
+better,B
+decreased,D
+high off scale,>
+increased,U
+intermediate,I
+low off scale,<
+moderately susceptible,MS
+outside threshold,EX
+resistent,R
+susceptible,S
+very susceptible,VS
+worse,W
