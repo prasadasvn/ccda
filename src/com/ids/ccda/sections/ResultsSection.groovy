@@ -72,8 +72,8 @@ class ResultsSection {
              statusCode(code:result.status )//dynamic
              component(){
                  //RESULT OBSERVATION TEMPLATES
-                 result.observations.each { observation ->
-                     generateObservation(result.uid, observation)
+                 result.observations.each { o ->
+                     generateObservation(result.uid, o)
                  }
              }
          }
@@ -81,7 +81,7 @@ class ResultsSection {
     }
 
     def generateObservation(resultUid, obsResult = [:]){
-        observation(classCode:"OBS", moodCode:"EVN"){
+        builder.observation(classCode:"OBS", moodCode:"EVN"){
             templateId(root:"2.16.840.1.113883.10.20.22.4.2")
             id(root:obsResult.uid)  //dynamic
 

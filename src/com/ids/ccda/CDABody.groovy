@@ -76,7 +76,19 @@ class CDABody {
         ]
 
         map.results = [
-                [uid: UUID.randomUUID(), ]
+                [uid: UUID.randomUUID(), snomed: [code:"SNOMED Code1", displayName: "SNOMED DisplayName1", status:"active"],
+                 observations:[
+                         [uuid:UUID.randomUUID(),
+                          code: [code: "Observation Code 1",
+                                 displayName: "Observation DisplayName1",
+                                 codeSystem: "2.16.840.1.113883.6.1",
+                                 codeSystemName:"LOINC"],
+                          status: "active",
+                          effectiveTime: "20130401124400",
+                          value: [value: "12.3", unit: "10+3/ul"]
+                         ]
+                   ]
+                ]
         ]
 
         def writer = new StringWriter()
