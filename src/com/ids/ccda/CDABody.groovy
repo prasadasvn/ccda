@@ -6,6 +6,7 @@ import com.ids.ccda.sections.ProblemsSection
 import com.ids.ccda.sections.ProceduresSection
 import com.ids.ccda.sections.ResultsSection
 import com.ids.ccda.sections.SocialHistorySection
+import com.ids.ccda.sections.VitalSignsSection
 import groovy.xml.MarkupBuilder
 
 /**
@@ -91,6 +92,23 @@ class CDABody {
                 ]
         ]
 
+        map.vitalSigns = [
+              [ uid: UUID.randomUUID(), date: "20081101",
+                height: [measurement: "177", units: "cm"],
+                weight: [measurement: "86", units: "kg"],
+                systolic: [measurement: "132", units: "mmHg"],
+                diastolic: [measurement: "86", units: "mmHg"],
+                bmi: [measurement: "27.45", units: ""]
+              ],
+              [ uid: UUID.randomUUID(), date: "20120806",
+                      height: [measurement: "177", units: "cm"],
+                      weight: [measurement: "88", units: "kg"],
+                      systolic: [measurement: "145", units: "mmHg"],
+                      diastolic: [measurement: "88", units: "mmHg"],
+                      bmi: [measurement: "28.09", units: ""]
+              ]
+        ]
+
         def writer = new StringWriter()
         def builder = new MarkupBuilder(writer)
         new CDABody(builder, map)
@@ -112,6 +130,7 @@ class CDABody {
               new ProceduresSection(builder, map).builder
               new SocialHistorySection(builder, map).builder
               new ResultsSection(builder,map).builder
+              new VitalSignsSection(builder,map).builder
 
             }
         }
