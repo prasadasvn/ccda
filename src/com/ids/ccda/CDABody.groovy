@@ -1,6 +1,7 @@
 package com.ids.ccda
 
 import com.ids.ccda.sections.AllergiesSection
+import com.ids.ccda.sections.ImmunizationsSection
 import com.ids.ccda.sections.MedicationsSection
 import com.ids.ccda.sections.ProblemsSection
 import com.ids.ccda.sections.ProceduresSection
@@ -109,6 +110,13 @@ class CDABody {
               ]
         ]
 
+        map.immunizations = [
+              [ uid: UUID.randomUUID(), code: "88", name: "Influenza virus vaccine", date: "20051101"],
+              [ uid: UUID.randomUUID(), code: "88", name: "Influenza virus vaccine", date: "20060910"],
+              [ uid: UUID.randomUUID(), code: "09", name: "Tetanus-diphtheria adult", date: "20070104"],
+              [ uid: UUID.randomUUID(), code: "33", name: "Pneumococcal polysaccharide", date: "20120806"]
+        ]
+
         def writer = new StringWriter()
         def builder = new MarkupBuilder(writer)
         new CDABody(builder, map)
@@ -131,6 +139,7 @@ class CDABody {
               new SocialHistorySection(builder, map).builder
               new ResultsSection(builder,map).builder
               new VitalSignsSection(builder,map).builder
+              new ImmunizationsSection(builder,map).builder
 
             }
         }
