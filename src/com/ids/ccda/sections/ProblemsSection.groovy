@@ -6,7 +6,7 @@ class ProblemsSection {
     def map
     MarkupBuilder builder
     def problems = [:]
-    def ATTRS = ["uid", "observationUid", "statusUid", "code", "name", "statusCode", "statusName", "onsetDate", "resolutionDate" ]
+    def ATTRS = ["uid", "code", "name", "statusCode", "statusName", "onsetDate", "resolutionDate" ]
 
     ProblemsSection(builder, map =[:]) {
         this.builder = builder
@@ -64,7 +64,7 @@ class ProblemsSection {
                 entryRelationship(typeCode:"REFR"){
                     observation(classCode:"OBS", moodCode:"ENV"){
                         templateId(root:"2.16.840.1.113883.10.20.22.4.6")
-                        id(root:problem.observationUid)
+                        id(root:UUID.randomUUID())
                         code(code:"55607006", codeSystem: "2.16.840.1.113883.6.96", displayName:"Problem") //static, could be dynamic
                         text(){
                             reference(value:"#problem-${problem.uid}")
@@ -80,12 +80,12 @@ class ProblemsSection {
                         entryRelationship( typeCode:"REFR"){
                             observration(classCode:"OBS", moodCode:"EVN"){
                                 templateId(root:"2.16.840.1.113883.10.20.22.4.6")
-                                id(root:problem.statusUid)
+                                id(root:UUID.randomUUID())
                                 code(code:"33999-4",
                                      codeSystem:"2.16.840.1.113883.6.1",
                                      displayName: "Status")
                                 text(){
-                                    reference(value:"#status-${problem.statusUid}")
+                                    reference(value:"#status-${problem.uid}") //might need to reference this differently
                                 }
                                 statusCode(code:"completed")
                                 value("xsi:type":"CD",

@@ -29,32 +29,30 @@ class CDABody {
                 state: "TX", zipCode: "76502"
         ]
         map.allergies = [
-                [ uid: UUID.randomUUID(), observationUid: UUID.randomUUID(), statusCode:"active",
+                [ uid: UUID.randomUUID(),  statusCode:"active",
                         effectiveTimeLow: "20010214", effectiveTimeHigh:"", reactionCode: "59037007",
                         reactionName:"Nausea", drugCode:"12345", drugName:"A DRUG"],
-                [ uid: UUID.randomUUID(), observationUid: UUID.randomUUID(), statusCode:"completed",
+                [ uid: UUID.randomUUID(),  statusCode:"completed",
                         effectiveTimeLow: "", effectiveTimeHigh:"20100214", reactionCode: "416098002",
                         reactionName:"Difficulty Breathing", drugCode:"678910", drugName:"B DRUG"],
 
         ]
 
         map.medications = [
-                [ uid: UUID.randomUUID(), consumableUid: UUID.randomUUID(), code: "RxNorm1", name: "A Drug 1",
+                [ uid: UUID.randomUUID(), code: "RxNorm1", name: "A Drug 1",
                         startDate: "20130114", stopDate: "20130214",
                   instructions: "1 drop, into both eyes, twice a day"],
 
-                [ uid: UUID.randomUUID(), consumableUid: UUID.randomUUID(), code: "RxNorm2", name: "A Drug 2",
+                [ uid: UUID.randomUUID(),  code: "RxNorm2", name: "A Drug 2",
                         startDate: "20121005", stopDate: "",
                         instructions: "1 drop, into left eye, once a day"],
         ]
 
         map.problems = [
-                [ uid:  UUID.randomUUID(), observationUid: UUID.randomUUID(), statusUid: UUID.randomUUID(),
-                  code:  "123456", name:  "Problem Name1",  statusCode: "55561003", statusName:"Active",
+                [ uid:  UUID.randomUUID(), code:  "123456", name:  "Problem Name1",  statusCode: "55561003", statusName:"Active",
                         activeDates: [ startDate: "20090211", endDate: null],  observedDates: [ startDate: "20120114", endDate: null]
                 ],
-                [ uid:  UUID.randomUUID(), observationUid: UUID.randomUUID(), statusUid: UUID.randomUUID(),
-                  code:  "765432", name:  "Problem Name2",  statusCode: "55561003", statusName:"Active",
+                [ uid:  UUID.randomUUID(),   code:  "765432", name:  "Problem Name2",  statusCode: "55561003", statusName:"Active",
                   activeDates: [ startDate: "20120114", endDate: null] ,  observedDates: [ startDate: "20120114", endDate: null]
 
                 ]

@@ -20,13 +20,17 @@ class CCDA {
     public static void main(String[] args) {
         def map = [:]
         map.templateId = "5678"
-        map.patient = [ id: "1234", firstName: "John", lastName: "Doe", middleName: "Q",
-                dateOfBirth: "19690413", gender: "M", maritalStatus: "M",
-                addressLine1: "123 Main St", addressLine2: "Apt 24", city: "Temple",
-                state: "TX", zipCode: "76502"
+        map.patient = [ id: "1234", mrn:"123", pmsId:"123",
+                firstName: "Isabella", lastName: "Jones",  dateOfBirth: "19470501",
+                addressLine1: "123 Main St", addressLine2: "Apt 24", city: "Temple", state: "TX", zipCode: "76502",
+                homePhone: "(214) 123-456", workPhone: "(254) 456-7890", mobilePhone: "(214) 222-3333",
+                email: "isabellajones@something.com",
+                gender: [code: "F", displayName: "Female"], maritalStatus: [code:"M", displayName: "Married"],
+                race: [code: "2106-3", displayName: "White"], ethnicity: [code: "2186-5", displayName: "Not Hispanic or Latino"]
         ]
         map.author = [:]
         map.custodian = [:]
+        map.encounter = [startDate: "", endDate: "", attendingProvider:[npi:"12345678", firstName:"Tom" , lastName:"Crow"]]
 
         new CCDA(map)
     }

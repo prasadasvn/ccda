@@ -13,7 +13,7 @@ class MedicationsSection {
     def map
     MarkupBuilder builder
     def medications = [:]
-    def ATTRS = ["uid", "consumableUid", "code", "name", "dosageQuantity", "dosageUnit", "startDate", "stopDate", "instructions"  ]
+    def ATTRS = ["uid", "code", "name", "dosageQuantity", "dosageUnit", "startDate", "stopDate", "instructions"  ]
 
     MedicationsSection(builder, map =[:]) {
         this.builder = builder
@@ -78,7 +78,7 @@ class MedicationsSection {
               text(){
                   reference(value:"medication-${medication.uid}"){ medication.name} //dynamic
               }
-              statusCode(code:"completed") //TODO:research status code possible values
+              statusCode(code:"completed") //status is in actuality communicated by the effectiveTime
               effectiveTime("xsi:type":"IVL_TS"){
                   low(value: medication.startDate) //example shows YYYYMMDD //dynamic
                   high(value: medication.endDate) //example shows YYYYMMDD //dynamic
@@ -99,7 +99,7 @@ class MedicationsSection {
               consumable(){     //MEDICATION INFORMATION TEMPLATE
                   manufacturedProduct(classCode:"MANU"){
                       templateId(root:"2.16.840.1.113883.10.20.22.4.23")
-                      id(root: medication.consumableUid)//dynamic
+                      id(root: UUID.randomUUID())
                       manufacturedMaterial(){
                           code(cdoe:medication.code,     //RX Norm I believe  //dynamic
                                   codeSystem:"2.16.840.1.113883.6.88",

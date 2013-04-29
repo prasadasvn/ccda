@@ -1,4 +1,4 @@
-package com.ids.ccda
+package com.ids.ccda.oids
 
 /**
  * Created with IntelliJ IDEA.
@@ -7,7 +7,7 @@ package com.ids.ccda
  * Time: 11:20 AM
  * To change this template use File | Settings | File Templates.
  */
-class OIDS {
+class IDS_OID {
     static final IDS_ROOT = "2.16.840.1.113883.3.1048";
 
     static final IDS_EMR = "${IDS_ROOT}.1";
@@ -17,14 +17,9 @@ class OIDS {
 
     static final IDS_CLINICAL_SUMMARY = "${IDS_EMR_DOCUMENTS}.1";
 
-    static final IDS_PATIENT_MRN = "${IDS_EMR_IDS}.1";
+    static final IDS_PATIENT_ID = "${IDS_EMR_IDS}.1";
+    static final IDS_PATIENT_MRN = "${IDS_EMR_IDS}.2";
+    static final IDS_PATIENT_PMS_ID = "${IDS_EMR_IDS}.3";
 
-    static final FORMAT_DATE_DTM_US_FIELDED = "yyyyMMddHHmmSSZ"
-
-    static final NPI = "2.16.840.1.113883.4.6"
-
-    static final SNOMED = "2.16.840.1.113883.6.96"
-
-    static final INTERPRETATION_RESULTS = "2.16.840.1.113883.5.83"
 
 }

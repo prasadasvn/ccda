@@ -1,6 +1,6 @@
 package com.ids.ccda.sections
 
-import com.ids.ccda.OIDS
+import com.ids.ccda.oids.HL7_OID
 import groovy.xml.MarkupBuilder
 
 /**
@@ -87,7 +87,7 @@ class ProceduresSection {
                              codeSystemName:"Body Site Value Set")
               performer(){
                   assignedEntity(){
-                      id(root:OIDS.NPI, pro.performer.npi)  //dynamic
+                      id(root:HL7_OID.NPI, pro.performer.npi)  //dynamic
                       addr(use:"PUB" ){
                           streetAddressLine(pro.performer.addressLine1)   //dynamic
                           streetAddressLine(pro.performer.addressLine2)  //dynamic

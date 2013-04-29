@@ -16,7 +16,7 @@ class AllergiesSection {
     def map
     def allergies = [:]
     MarkupBuilder builder
-    def ALLERGY_ATTRS = [ "uid", "observationUid", "statusCode", "effectiveTimeLow", "effectiveTimeHigh", "reactionCode", "reactionName", "drugCode", "drugName" ]
+    def ALLERGY_ATTRS = [ "uid", "statusCode", "effectiveTimeLow", "effectiveTimeHigh", "reactionCode", "reactionName", "drugCode", "drugName" ]
 
     AllergiesSection( MarkupBuilder builder, map) {
         this.map = map
@@ -80,7 +80,7 @@ class AllergiesSection {
                       entityRelationship( typeCode:"SUBJ"){
                           observeration(classCode:"OBS", moodCode:"EVN"){
                               templateId(root:"2.16.840.1.113883.10.20.22.4.7")
-                              id(root:allergy.observationUid)//not sure what this represents     //dyanmic
+                              id(root:UUID.randomUUID())
                               code(code:"ASSERTION",codeSystem:"2.16.840.1.113883.5.4")
                               statusCode(code:"completed") //static
                               effectiveTime(low: allergy.effectiveTimeLow, high: allergy.effectiveTimeHigh) // if beginning is unknown (low), then null flavor UNK; if no longer a concern, may contain high //dyanmic

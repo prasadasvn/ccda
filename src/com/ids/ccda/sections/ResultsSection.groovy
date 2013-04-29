@@ -1,6 +1,6 @@
 package com.ids.ccda.sections
 
-import com.ids.ccda.OIDS
+import com.ids.ccda.oids.HL7_OID
 import groovy.xml.MarkupBuilder
 
 class ResultsSection {
@@ -67,7 +67,7 @@ class ResultsSection {
              code("xsi:type":"CE",
                   code:result.snomed.code, //dynamic
                   displayName: result.snomed.displayName, //dynamic
-                  codeSystem: OIDS.SNOMED,
+                  codeSystem: HL7_OID.SNOMED,
                   codeSystemName: "SNOMED CT")
              statusCode(code:result.status )//dynamic
              component(){
@@ -100,7 +100,7 @@ class ResultsSection {
                   unit: obsResult.value.unit    //dynamic
             )
             interpretationCode(code:obsResult.interpretationCode, //dynamic
-                               codeSystem: OIDS.INTERPRETATION_RESULTS
+                               codeSystem: HL7_OID.INTERPRETATION_RESULTS
             )
 
 
