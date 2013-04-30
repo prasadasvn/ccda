@@ -20,6 +20,7 @@ class CCDA {
     public static void main(String[] args) {
         def map = [:]
         map.templateId = "5678"
+        map.effectiveDate =  new Date()
         map.patient = [ id: "1234", mrn:"123", pmsId:"123",
                 firstName: "Isabella", lastName: "Jones",  dateOfBirth: "19470501",
                 addressLine1: "123 Main St", addressLine2: "Apt 24", city: "Temple", state: "TX", zipCode: "76502",

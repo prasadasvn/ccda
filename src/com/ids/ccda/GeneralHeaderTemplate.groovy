@@ -12,6 +12,7 @@ import groovy.xml.MarkupBuilder
  * To change this template use File | Settings | File Templates.
  */
 class GeneralHeaderTemplate {
+    public static final CLINIC_SUMMARY = [code: "34133-9",  displayName: "Summarization of Episode Note"]
 
     def map
     def patient = [:]
@@ -21,7 +22,9 @@ class GeneralHeaderTemplate {
     def encounters = []
 
     MarkupBuilder builder
+
     // all dates need to formatted according to IDS_OID.FORMAT_DATE_DTM_US_FIELDED
+
     def MAP_ATTRS = [ "title", "effectiveDate"]
     def PAT_ATTRS = [ "id", "mrn", "pmsId",
                       "lastName", "firstName", "middleName",  "dateOfBirth",
@@ -71,7 +74,7 @@ class GeneralHeaderTemplate {
                assigningAuthorityName:"Integrity EMR",
                extension: clinicSummaryId(map.tenantId, patient.id), //TODO: move to SledgeHammer
                displayable: "true" )
-       builder.code([code: "34133-9",  displayName: "Summarization of Episode Note"] + HL7_OID.LOINC)
+       builder.code( CLINIC_SUMMARY + HL7_OID.LOINC )
        builder.title( map.title) //summary specific, practice specific
        builder.effectiveTime(generateEffectiveDate())  //time created
        builder.confidentialityCode( HL7_OID.DOCUMENT_CONFIDENTIALITY)
@@ -136,27 +139,11 @@ class GeneralHeaderTemplate {
                        given(patient.firstName)
                        given(patient.middleName)
                    }
-                   administrativeGenderCode( code: patient.gender.code,
-                           codeSystem:"2.16.840.1.113883.5.1",
-                           displayName: patient.gender.diplayName)
+                   administrativeGenderCode( [code: patient.gender.code, displayName: patient.gender.diplayName] + HL7_OID.GENDER_CODE)
                    birthTime(patient.dateOfBirth)
-                   maritalStatusCode(code:patient.maritalStatus.code,
-                           displayName:patient.maritalStatus.displayName,
-                           codeSystem:"2.16.840.1.113883.5.2",
-                           codeSystemName:"MaritalStatusCode")
-
-                   raceCode( code: patient.race.code,
-                           displayName: patient.race.displayName,
-                           codeSystem:"2.16.840.1.113883.6.238",
-                           codeSystemName: "Race and Ethnicity - CDC")
-                   /*http://phinvads.cdc.gov/vads/ViewCodeSystemConcept.action?oid=2.16.840.
-                   1.113883.6.238&code=1000-9 */
-
-                   ethnicGroupCode(  code:patient.ethnicity.code,
-                           displayame: patient.ethnicity.displayName,
-                           codeSystem:"2.16.840.1.113883.6.238",
-                           codeSystemName: "Race and Ethnicity - CDC"
-                   )
+                   maritalStatusCode([code:patient.maritalStatus.code, displayName:patient.maritalStatus.displayName ] +  HL7_OID.MARITAL_CODE)
+                   raceCode( [code: patient.race.code, displayName: patient.race.displayName] +  HL7_OID.RACE_OR_ETHNICITY_CODE )
+                   ethnicGroupCode(  [code:patient.ethnicity.code, displayame: patient.ethnicity.displayName] + HL7_OID.RACE_OR_ETHNICITY_CODE )
                }
                //providerOrganization() //TODO:if we want this (not required), we'll need to add address and telephone fields to either clinic site or practice
            }
@@ -168,7 +155,7 @@ class GeneralHeaderTemplate {
      builder.custodian(){
        assignedCustodian(){
            representedCustodianOrganization(){
-               id(root:"2.16.840.1.113883.4.6", extension: custodian.npi)  //Organization NPI
+               id(root:HL7_OID.NPI, extension: custodian.npi)  //Organization NPI
                name(custodian.practiceName) //Practice Name
                telecom( value: "tel:${custodian.phone}" , use: "WP")
                addr(use:"PUB" ){
@@ -191,9 +178,7 @@ class GeneralHeaderTemplate {
    def generateParticipant(participant = [:]) {
        builder.participant(typeCode:"IND"){
            associatedEntity(classCode:"PRS"){
-               code(participant.relationshipCode +
-                    [codeSystem:"2.16.840.1.113883.1.11.19563",
-                     codeSystemName:"Personal Relationship Role Type Value Set"])
+               code(participant.relationshipCode + HL7_OID.PERSONAL_RELATIONSHIP_ROLE    )
                associatedPerson(){
                    name(){
                        given(particpant.firstName)
@@ -213,7 +198,7 @@ class GeneralHeaderTemplate {
    def generateServiceEvent( encounter = [:]){
      builder.documentationOf( typeCode:"DOC"){
          serviceEvent(classCode:"PCPR"){
-             code( encounter.primaryDiagnosis + [codeSystem:"2.16.840.1.113883.6.96", codeSystemName:"SNOMED-CT"])
+             code( encounter.primaryDiagnosis + HL7_OID.SNOMED )
              effectiveTime(){
                  low(value:encounter.startDate?.format(HL7_OID.FORMAT_DATE_DTM_US_FIELDED))
                  high(value:encounter.endDate?.format(HL7_OID.FORMAT_DATE_DTM_US_FIELDED))
@@ -221,10 +206,7 @@ class GeneralHeaderTemplate {
 
                performer(typeCode:"PRF"){
                    //function code could be PP - PrimaryCarePhysician, RP - Referring, or CP Consulting
-                   functionCode(code:"PP",
-                                displayName:"Primary Performer",
-                                codeSystem:"2.16.840.1.113883.12.443",
-                                codeSystemName: "Provider Role"){
+                   functionCode([code:"PP",  displayName:"Primary Performer"] + HL7_OID.PROVIDER_ROLE  ){
                        originalText("Primary Care Provider")
                    }
                    time(){
