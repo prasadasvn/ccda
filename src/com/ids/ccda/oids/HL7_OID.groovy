@@ -34,12 +34,15 @@ class HL7_OID {
     public static final ALLERGY_INTOLERANCE_OBSERVATION_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.7"]
 
     public static final IMMUNIZATION_SECTION_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.2.2.1"]
-    public static final SUBSTANCE_ADMINISTRATION_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.52"]
+    public static final IMMUNIZATION_ACTIVITY_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.52"]
     public static final IMMUNIZATION_MEDICATION_INFORMATION_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.54"]
 
+    public static final MEDICATIONS_SECTION_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.2.1.1"]
+    public static final MEDICATIONS_ACTIVITY_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.16"]
+    public static final MEDICATION_INFORMATION_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.23"]
 
-
-
+    public static final INSTRUCTIONS_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.20"]
+    public static final PATIENT_EDUCATION_VALUE_SET = [codeSystem:"2.16.840.1.113883.11.20.9.34", codeSystemName:"Patient Education"]
 
 
 

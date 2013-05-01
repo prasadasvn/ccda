@@ -62,7 +62,7 @@ class ImmunizationsSection {
       builder.entry( typeCode:"DRIV"){
           //Immunization Activity Template
           substanceAdministration(classCode:"SBADM", moodCode:"EVN", negationInd:"false"){
-            templateId(HL7_OID.SUBSTANCE_ADMINISTRATION_TEMPLATE_ID)
+            templateId(HL7_OID.IMMUNIZATION_ACTIVITY_TEMPLATE_ID)
             id(root:UUID.randomUUID())
             text(){ reference(value:"#$immunization-${immunization.uid}") }
             status(code:"completed")

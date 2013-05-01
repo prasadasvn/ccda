@@ -6,7 +6,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/GeneralHeaderTemplate.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367336845206" ignored="false" />
     <file path="/OIDS.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1366653685370" ignored="false" />
-    <file path="/a.dummy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367415459935" ignored="false" />
+    <file path="/a.dummy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367418642782" ignored="false" />
     <file path="/Dummy.txt" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1366653823770" ignored="false" />
     <file path="$PROJECT_DIR$/../PDFtoTiff/src/com/ids/pdftotiff/PdfToTiff.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1363101584854" ignored="false" />
     <file path="/PdfToTiff.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1363033554903" ignored="false" />
@@ -14,7 +14,7 @@
     <file path="/MaritalStatus.java" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1363205082358" ignored="false" />
     <file path="/CCDA.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1366749595257" ignored="false" />
     <file path="/CCDBody.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1363362707084" ignored="false" />
-    <file path="/MedicationsSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367247070552" ignored="false" />
+    <file path="/MedicationsSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367421111921" ignored="false" />
     <file path="/CDABody.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1366231518404" ignored="false" />
     <file path="/AllergiesSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367415447046" ignored="false" />
     <file path="$PROJECT_DIR$/../SledgeHammer/grails-app/services/com/ids/emr/server/erx/RcopiaErxService.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1363726790507" ignored="false" />
@@ -28,7 +28,7 @@
     <file path="/result_status.txt" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1365092652656" ignored="false" />
     <file path="/VitalSignsSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1366212931276" ignored="false" />
     <file path="/ImmunizationsSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367418071900" ignored="false" />
-    <file path="/HL7_OID.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367418063315" ignored="false" />
+    <file path="/HL7_OID.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367418672172" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/relaxng.rng" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367288828539" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/catalog.xsd" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367288828539" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/xml.xsd" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367288828539" ignored="false" />
@@ -121,9 +121,9 @@
         </leaf>
       </split-first>
       <split-second>
-        <splitter split-orientation="horizontal" split-proportion="0.7715827">
+        <splitter split-orientation="horizontal" split-proportion="0.7719928">
           <split-first>
-            <splitter split-orientation="vertical" split-proportion="0.48879403">
+            <splitter split-orientation="vertical" split-proportion="0.41195303">
               <split-first>
                 <leaf>
                   <file leaf-file-name="IDS_OID.groovy" pinned="false" current="false" current-in-tab="false">
@@ -138,7 +138,7 @@
                   <file leaf-file-name="HL7_OID.groovy" pinned="false" current="false" current-in-tab="true">
                     <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/oids/HL7_OID.groovy">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="37" column="31" selection-start="2501" selection-end="2501" vertical-scroll-proportion="0.8564593">
+                        <state line="44" column="97" selection-start="3075" selection-end="3075" vertical-scroll-proportion="0.55780345">
                           <folding />
                         </state>
                       </provider>
@@ -148,10 +148,21 @@
               </split-first>
               <split-second>
                 <leaf>
-                  <file leaf-file-name="AllergiesSection.groovy" pinned="false" current="true" current-in-tab="true">
+                  <file leaf-file-name="AllergiesSection.groovy" pinned="false" current="false" current-in-tab="false">
                     <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/sections/AllergiesSection.groovy">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="15" column="38" selection-start="709" selection-end="709" vertical-scroll-proportion="0.5196305">
+                        <state line="10" column="2" selection-start="206" selection-end="399" vertical-scroll-proportion="0.0">
+                          <folding>
+                            <element signature="e#31#63#0" expanded="true" />
+                          </folding>
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="MedicationsSection.groovy" pinned="false" current="true" current-in-tab="true">
+                    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/sections/MedicationsSection.groovy">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="120" column="68" selection-start="4715" selection-end="4715" vertical-scroll-proportion="0.76237625">
                           <folding>
                             <element signature="e#31#63#0" expanded="true" />
                           </folding>
@@ -197,7 +208,6 @@
         <option value="$PROJECT_DIR$/src/com/ids/ccda/OIDS.groovy" />
         <option value="$PROJECT_DIR$/test.xml" />
         <option value="$PROJECT_DIR$/Greenway_example_CCDA.xml" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/sections/MedicationsSection.groovy" />
         <option value="$PROJECT_DIR$/src/com/ids/ccda/CDABody.groovy" />
         <option value="$PROJECT_DIR$/src/com/ids/ccda/sections/ProblemsSection.groovy" />
         <option value="$PROJECT_DIR$/src/com/ids/ccda/oids/IDS_OID.groovy" />
@@ -205,8 +215,9 @@
         <option value="$PROJECT_DIR$/src/com/ids/ccda/GeneralHeaderTemplate.groovy" />
         <option value="$PROJECT_DIR$/src/com/ids/ccda/CCDA.groovy" />
         <option value="$PROJECT_DIR$/src/com/ids/ccda/sections/AllergiesSection.groovy" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/oids/HL7_OID.groovy" />
         <option value="$PROJECT_DIR$/src/com/ids/ccda/sections/ImmunizationsSection.groovy" />
+        <option value="$PROJECT_DIR$/src/com/ids/ccda/oids/HL7_OID.groovy" />
+        <option value="$PROJECT_DIR$/src/com/ids/ccda/sections/MedicationsSection.groovy" />
       </list>
     </option>
   </component>
@@ -618,11 +629,6 @@
         <state line="71" column="112" selection-start="2237" selection-end="2237" vertical-scroll-proportion="0.29765886" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/sections/MedicationsSection.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="24" selection-start="332" selection-end="332" vertical-scroll-proportion="0.2631579" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/example_clinical_document.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="92" column="24" selection-start="4169" selection-end="4169" vertical-scroll-proportion="0.0">
@@ -698,13 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/oids/HL7_OID.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="31" selection-start="2501" selection-end="2501" vertical-scroll-proportion="0.8564593">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/sections/ImmunizationsSection.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="54" selection-start="174" selection-end="174" vertical-scroll-proportion="0.24940617">
@@ -716,7 +715,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/sections/AllergiesSection.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="38" selection-start="709" selection-end="709" vertical-scroll-proportion="0.5196305">
+        <state line="10" column="2" selection-start="206" selection-end="399" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#31#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/oids/HL7_OID.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="97" selection-start="3075" selection-end="3075" vertical-scroll-proportion="0.55780345">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/sections/MedicationsSection.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="120" column="68" selection-start="4715" selection-end="4715" vertical-scroll-proportion="0.76237625">
           <folding>
             <element signature="e#31#63#0" expanded="true" />
           </folding>

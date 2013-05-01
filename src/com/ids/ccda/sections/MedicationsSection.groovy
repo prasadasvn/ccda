@@ -1,5 +1,6 @@
 package com.ids.ccda.sections
 
+import com.ids.ccda.oids.HL7_OID
 import groovy.xml.MarkupBuilder
 
 /**
@@ -10,6 +11,10 @@ import groovy.xml.MarkupBuilder
  * To change this template use File | Settings | File Templates.
  */
 class MedicationsSection {
+    public static final TITLE = "Medications"
+    public static final SECTION_CODE = [code:"10160-0", displayName:"HISTORY OF MEDICATION USE"] + HL7_OID.LOINC
+
+
     def map
     MarkupBuilder builder
     def medications = [:]
@@ -25,14 +30,9 @@ class MedicationsSection {
     def generate(){
       builder.component(){
           section(){
-              templateId(root:"2.16.840.1.113883.10.20.22.2.1")
-              templateId(root:"2.16.840.1.113883.10.20.22.2.1.1")
-              code(code:"10160-0",
-                   codeSystem:"2.16.840.1.113883.6.1",
-                   codeSystemName:"LOINC",
-                   displayName:"HISTORY OF MEDICATION USE"
-              )
-              title("Medications")
+              templateId(HL7_OID.MEDICATIONS_SECTION_TEMPLATE_ID)
+              code(SECTION_CODE)
+              title(TITLE)
               generateNormativeText()
               medications.each { medication ->
                 generateEntry(medication)
@@ -56,9 +56,7 @@ class MedicationsSection {
                 }
                 medications.each{ medication ->
                     tr(){
-                        td(){
-                            content(ID:"medication-${medication.uid}"){medication.name}
-                        }
+                        td(){content(ID:"medication-${medication.uid}"){medication.name} }
                         td(medication.code)
                         td(medication.startDate)
                         td(medication.stopDate)
@@ -73,11 +71,9 @@ class MedicationsSection {
       builder.entry(){
           // MEDICATION ACTIVITY TEMPLATE
           substanceAdministration(classCode:"SBADM", moodCode:"EVN"){
-              templateId(root:"2.16.840.1.113883.10.20.22.4.16")
+              templateId(HL7_OID.MEDICATIONS_ACTIVITY_TEMPLATE_ID)
               id(root: medication.uid) //dynamic
-              text(){
-                  reference(value:"medication-${medication.uid}"){ medication.name} //dynamic
-              }
+              text(){ reference(value:"medication-${medication.uid}"){ medication.name} }//dynamic
               statusCode(code:"completed") //status is in actuality communicated by the effectiveTime
               effectiveTime("xsi:type":"IVL_TS"){
                   low(value: medication.startDate) //example shows YYYYMMDD //dynamic
@@ -98,15 +94,11 @@ class MedicationsSection {
               doseQuantity( value:medication.dosageQuantity, unit:medication.dosageUnit)  //dynamic
               consumable(){     //MEDICATION INFORMATION TEMPLATE
                   manufacturedProduct(classCode:"MANU"){
-                      templateId(root:"2.16.840.1.113883.10.20.22.4.23")
+                      templateId(HL7_OID.MEDICATION_INFORMATION_TEMPLATE_ID)
                       id(root: UUID.randomUUID())
                       manufacturedMaterial(){
-                          code(cdoe:medication.code,     //RX Norm I believe  //dynamic
-                                  codeSystem:"2.16.840.1.113883.6.88",
-                                  displayName: medication.name){
-                              originalText(){
-                                  reference(value:"medication-${medication.uuid}") //dynamic
-                              }
+                          code([code:medication.code,  displayName: medication.name] + HL7_OID.RX_NORM){ //dynamic
+                              originalText(){ reference(value:"medication-${medication.uuid}") }//dynamic
                           }
                       }
                   }
@@ -114,11 +106,8 @@ class MedicationsSection {
               //INSTRUCTIONS
               entryRelationship(typeCode:"SUBJ", inversionInd:"true"){
                   act(classCode:"ACT", moodCode:"INT"){
-                      templateId(root:"2.16.840.1.113883.10.20.22.4.20")
-                      code("xsi:type":"CE",
-                              code: "311401005",
-                              codeSystem:"2.16.840.1.113883.11.20.9.34",
-                              codeSystemName:"Patient Education")
+                      templateId(HL7_OID.INSTRUCTIONS_TEMPLATE_ID)
+                      code(["xsi:type":"CE", code: "311401005"] + HL7_OID.PATIENT_EDUCATION_VALUE_SET)
                       text(){
                           reference(value:"instructions-${medication.uid}")
                           medication.instructions
