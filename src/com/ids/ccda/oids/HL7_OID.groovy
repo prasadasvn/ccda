@@ -13,6 +13,8 @@ class HL7_OID {
     static final INTERPRETATION_RESULTS = "2.16.840.1.113883.5.83"
     public static final NPI = "2.16.840.1.113883.4.6"
     public static final LOINC =[ codeSystem:"2.16.840.1.113883.6.1",   codeSystemName: "LOINC"]
+    public static final RX_NORM = [codeSystem: "2.16.840.1.113883.6.88", codeSystemName:"RxNorm"]
+    public static final CVX = [ codeSystem: "2.16.840.1.113883.6.59", codeSystemName: "CVX"]
 
     public static final GENDER_CODE = [codeSystem: "2.16.840.1.113883.5.1",codeSystemName:"AdministrativeGenderCode"]
     public static final MARITAL_CODE = [codeSystem:"2.16.840.1.113883.5.2", codeSystemName:"MaritalStatusCode"]
@@ -27,6 +29,13 @@ class HL7_OID {
     public static final CCD_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.1.2"]
     public static final DOCUMENT_CONFIDENTIALITY = [codeSystem:"2.16.840.1.113883.5.25", code:"N"] //N-Normal, R-Restricted, V-Very Restricted, if ever needed
 
+    public static final ALLERGIES_SECTION_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.2.6.1"]
+    public static final ALLERGY_PROBLEM_ACT_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.30"]
+    public static final ALLERGY_INTOLERANCE_OBSERVATION_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.7"]
+
+    public static final IMMUNIZATION_SECTION_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.2.2.1"]
+    public static final SUBSTANCE_ADMINISTRATION_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.52"]
+    public static final IMMUNIZATION_MEDICATION_INFORMATION_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.54"]
 
 
 
