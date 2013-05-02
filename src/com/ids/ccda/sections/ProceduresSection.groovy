@@ -7,7 +7,6 @@ import groovy.xml.MarkupBuilder
 class ProceduresSection {
     public static final TITLE = "Procedures"
     public static final SECTION_CODE = [code:"47519-4", displayName:"HISTORY OF PROCEDURES"] + HL7_OID.LOINC
-    public static final ALLERGY_INTOLERANCE_CODE = [code:"ASSERTION",codeSystem:"2.16.840.1.113883.5.4"]
 
     def map
     MarkupBuilder builder
@@ -66,10 +65,10 @@ class ProceduresSection {
               statusCode(code:"completed")//since this is a history, it would be completed, but could contain aborted,active,cancelled, or completed
               effectiveTime(value:pro.date)
               //targetSiteCode is should not shall, and I do not believe we have a way of getting this information for procedures
-              /*targetSiteCode(code: pro.bodySiteCode,
+              targetSiteCode(code: pro.bodySiteCode,
                              displayName: pro.bodySiteName,
                              codeSystem:"2.16.840.1.113883.3.88.12.3221.8.9",
-                             codeSystemName:"Body Site Value Set") */
+                             codeSystemName:"Body Site Value Set")
               performer(){
                   assignedEntity(){
                       id(root:HL7_OID.NPI, pro.performer.npi)  //dynamic

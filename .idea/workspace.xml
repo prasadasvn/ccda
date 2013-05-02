@@ -160,7 +160,7 @@
                   <file leaf-file-name="ProceduresSection.groovy" pinned="false" current="true" current-in-tab="true">
                     <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/sections/ProceduresSection.groovy">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="22" column="81" selection-start="712" selection-end="712" vertical-scroll-proportion="0.4787234">
+                        <state line="9" column="66" selection-start="278" selection-end="278" vertical-scroll-proportion="0.18237083">
                           <folding />
                         </state>
                       </provider>
@@ -733,7 +733,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/sections/ProceduresSection.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="81" selection-start="712" selection-end="712" vertical-scroll-proportion="0.4787234">
+        <state line="9" column="66" selection-start="278" selection-end="278" vertical-scroll-proportion="0.18237083">
           <folding />
         </state>
       </provider>
