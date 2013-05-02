@@ -16,6 +16,7 @@ class HL7_OID {
     public static final RX_NORM = [codeSystem: "2.16.840.1.113883.6.88", codeSystemName:"RxNorm"]
     public static final CVX = [ codeSystem: "2.16.840.1.113883.6.59", codeSystemName: "CVX"]
     public static final ACT_CLASS = [codeSystem: "2.16.840.1.113883.5.6", codeSystemName:"HL7ActClass"]
+    public static final ACT_CODE= [codeSystem: "2.16.840.1.113883.5.4", codeSystemName:"ActCode"]
 
     public static final GENDER_CODE = [codeSystem: "2.16.840.1.113883.5.1",codeSystemName:"AdministrativeGenderCode"]
     public static final MARITAL_CODE = [codeSystem:"2.16.840.1.113883.5.2", codeSystemName:"MaritalStatusCode"]
@@ -52,5 +53,9 @@ class HL7_OID {
     public static final PROCEDURES_SECTION_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.2.7.1"]
     public static final PROCEDURE_ACTIVITY_PROCEDURE_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.14"]
 
+    public static final RESULTS_SECTION_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.2.3.1"]
+
+    public static final SOCIAL_HISTORY_SECTION_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.2.17"]
+    public static final SMOKING_STATUS_OBSERVATION_TEMPLATE_ID = [root:"2.16.840.1.113883.10.22.4.78"]
 
 }

@@ -1,15 +1,13 @@
 package com.ids.ccda.sections
 
+import com.ids.ccda.oids.HL7_OID
 import groovy.xml.MarkupBuilder
 
-/**
- * Created with IntelliJ IDEA.
- * User: josh
- * Date: 3/15/13
- * Time: 10:37 AM
- * To change this template use File | Settings | File Templates.
- */
 class SocialHistorySection {
+    public static final TITLE = "Social History"
+    public static final SECTION_CODE = [code:"29762-2", displayName:"SOCIAL HISTORY"] + HL7_OID.LOINC
+    public static final SMOKING_STATUS_OBSERVATION_CODE = [code:"ASSERTION"] + HL7_OID.ACT_CODE
+
     def map
     def socialHistoryElements = [:]
     MarkupBuilder builder
@@ -26,18 +24,13 @@ class SocialHistorySection {
     def generate(){
       builder.component(){
           section(){
-              templateId(root:"2.16.840.1.113883.10.20.22.2.17")
-              code(code:"29762-2",
-                   codeSystem:"2.16.840.1.113883.6.1",
-                   codeSystemName:"LOINC",
-                   displayName:"SOCIAL HISTORY"
-              )
-              title("Social History")
+              templateId( HL7_OID.SOCIAL_HISTORY_SECTION_TEMPLATE_ID )
+              code( SECTION_CODE )
+              title( TITLE )
               generateNormativeText()
               socialHistoryElements.each { socialHistoryElement ->
                 generateEntry(socialHistoryElement)
               }
-
           }
       }
     }
@@ -55,9 +48,7 @@ class SocialHistorySection {
                 }
                 socialHistoryElements.each{ socialHistoryElement ->
                     tr(){
-                        td(){
-                            content(ID:"socialHistoryElement-${socialHistoryElement.uid}"){socialHistoryElement.type}//dynamic
-                        }
+                        td(){ content(ID:"socialHistoryElement-${socialHistoryElement.uid}"){socialHistoryElement.type} }//dynamic
                         td(socialHistoryElement.snomed.displayName) //dynamic
                         td(socialHistoryElement.dates.startDate)  //dynamic
                         td(socialHistoryElement.dates.endDate)  //dynamic
@@ -72,14 +63,13 @@ class SocialHistorySection {
           // Social history section template
           observation(classCode:"OBS", moodCode:"EVN"){
             //smoking status
-            templateId(root:"2.16.840.1.113883.10.22.4.78")
-            code(code:"ASSERTION", codeSystem:"2.16.840.1.113883.5.4" )
+            templateId(HL7_OID.SMOKING_STATUS_OBSERVATION_TEMPLATE_ID)
+            code( SMOKING_STATUS_OBSERVATION_CODE )
             statusCode(code:"completed")
             generateEffectiveTime( socialHistoryElement.dates) //dynamic
-            value("xsi:type":"CD",
-                   code:socialHistoryElement.snomed.code,    //dynamic
-                   displayName: socialHistoryElement.snomed.displayName, //dynamic
-                   codeSystem: "2.16.840.1.113883.6.96"
+            value(["xsi:type":"CD",
+                   code:socialHistoryElement.snomed.code,
+                   displayName: socialHistoryElement.snomed.displayName ] + HL7_OID.SNOMED
             )
         }
       }

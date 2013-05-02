@@ -4,6 +4,9 @@ import com.ids.ccda.oids.HL7_OID
 import groovy.xml.MarkupBuilder
 
 class ResultsSection {
+    public static final TITLE = "Results"
+    public static final SECTION_CODE = [code:"30954-2",displayName:"RESULTS"] + HL7_OID.LOINC
+
     def map
     MarkupBuilder builder
     def results = [:]
@@ -23,18 +26,13 @@ class ResultsSection {
     def generate(){
       builder.component(){
           section(){
-              templateId(root:"2.16.840.1.113883.10.20.22.2.3.1")
-              code(code:"30954-2",
-                   codeSystem:"2.16.840.1.113883.6.1",
-                   codeSystemName:"LOINC",
-                   displayName:"RESULTS"
-              )
-              title("Results")
+              templateId()
+              code( SECTION_CODE )
+              title(TITLE)
               generateNormativeText()
               results.each { result ->
                 generateEntry(result)
               }
-
           }
       }
     }
@@ -43,15 +41,11 @@ class ResultsSection {
         builder.text(){
             table(border:"1", width:"100%"){
                 thead(){
-                    tr(){
-
-                    }
+                    tr(){ td(){}  }
                 }
                 results.each{ result ->
                     tr(){
-                        td(){
-                            content(ID:"result-${result.uid}"){result.name}
-                        }
+                        td(){ content(ID:"result-${result.uid}"){result.name}  }
                     }
                 }
             }
