@@ -49,5 +49,8 @@ class HL7_OID {
     public static final PROBLEM_OBSERVATION_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.4"]
     public static final PROBLEM_STATUS_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.6"]
 
+    public static final PROCEDURES_SECTION_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.2.7.1"]
+    public static final PROCEDURE_ACTIVITY_PROCEDURE_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.14"]
+
 
 }

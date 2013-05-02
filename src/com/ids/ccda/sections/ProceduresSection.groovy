@@ -3,14 +3,12 @@ package com.ids.ccda.sections
 import com.ids.ccda.oids.HL7_OID
 import groovy.xml.MarkupBuilder
 
-/**
- * Created with IntelliJ IDEA.
- * User: josh
- * Date: 3/15/13
- * Time: 10:37 AM
- * To change this template use File | Settings | File Templates.
- */
+
 class ProceduresSection {
+    public static final TITLE = "Procedures"
+    public static final SECTION_CODE = [code:"47519-4", displayName:"HISTORY OF PROCEDURES"] + HL7_OID.LOINC
+    public static final ALLERGY_INTOLERANCE_CODE = [code:"ASSERTION",codeSystem:"2.16.840.1.113883.5.4"]
+
     def map
     MarkupBuilder builder
     def procedures = [:]
@@ -26,19 +24,13 @@ class ProceduresSection {
     def generate(){
       builder.component(){
           section(){
-              templateId(root:"2.16.840.1.113883.10.20.22.2.7")
-              templateId(root:"2.16.840.1.113883.10.20.22.2.7.1")
-              code(code:"47519-4",
-                   codeSystem:"2.16.840.1.113883.6.1",
-                   codeSystemName:"LOINC",
-                   displayName:"HISTORY OF PROCEDURES"
-              )
-              title("Procedures")
+              templateId(HL7_OID.PROCEDURES_SECTION_TEMPLATE_ID)
+              code( SECTION_CODE )
+              title( TITLE )
               generateNormativeText()
               procedures.each { procedure ->
                 generateEntry(procedure)
               }
-
           }
       }
     }
@@ -54,9 +46,7 @@ class ProceduresSection {
                 }
                 procedures.each{ procedure ->
                     tr(){
-                        td(){
-                            content(ID:"procedure-${procedure.uid}"){procedure.name}
-                        }
+                        td(){ content(ID:"procedure-${procedure.uid}"){procedure.name}  }
                         td(procedure.date)
                     }
                 }
@@ -68,23 +58,18 @@ class ProceduresSection {
       builder.entry( typeCode:"DRIV"){
         //PROCEDURE ACTIVITY PROCEDURE
           procedure(classCode:"PROC", moodCode:"EVN"){
-              templateId(root:"2.16.840.1.113883.10.20.22.4.14")
+              templateId(HL7_OID.PROCEDURE_ACTIVITY_PROCEDURE_TEMPLATE_ID)
               id(root: pro.uid)    //dynamic
-              code(code: pro.code,  //dynamic
-                   displayName: pro.name, //dynamic
-                   codeSystem: "2.16.840.1.113883.6.96",
-                   codeSystemName:"SNOMED CT"){
-                   originalText(){
-                       reference(value:"#procedure-${pro.uid}")
-                   }
+              code([code: pro.code, displayName: pro.name ] + HL7_OID.SNOMED ){ //dynamic
+                   originalText(){ reference(value:"#procedure-${pro.uid}")  }
               }
               statusCode(code:"completed")//since this is a history, it would be completed, but could contain aborted,active,cancelled, or completed
               effectiveTime(value:pro.date)
               //targetSiteCode is should not shall, and I do not believe we have a way of getting this information for procedures
-              targetSiteCode(code: pro.bodySiteCode,
+              /*targetSiteCode(code: pro.bodySiteCode,
                              displayName: pro.bodySiteName,
                              codeSystem:"2.16.840.1.113883.3.88.12.3221.8.9",
-                             codeSystemName:"Body Site Value Set")
+                             codeSystemName:"Body Site Value Set") */
               performer(){
                   assignedEntity(){
                       id(root:HL7_OID.NPI, pro.performer.npi)  //dynamic
