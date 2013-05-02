@@ -15,6 +15,7 @@ class HL7_OID {
     public static final LOINC =[ codeSystem:"2.16.840.1.113883.6.1",   codeSystemName: "LOINC"]
     public static final RX_NORM = [codeSystem: "2.16.840.1.113883.6.88", codeSystemName:"RxNorm"]
     public static final CVX = [ codeSystem: "2.16.840.1.113883.6.59", codeSystemName: "CVX"]
+    public static final ACT_CLASS = [codeSystem: "2.16.840.1.113883.5.6", codeSystemName:"HL7ActClass"]
 
     public static final GENDER_CODE = [codeSystem: "2.16.840.1.113883.5.1",codeSystemName:"AdministrativeGenderCode"]
     public static final MARITAL_CODE = [codeSystem:"2.16.840.1.113883.5.2", codeSystemName:"MaritalStatusCode"]
@@ -42,9 +43,11 @@ class HL7_OID {
     public static final MEDICATION_INFORMATION_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.23"]
 
     public static final INSTRUCTIONS_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.20"]
-    public static final PATIENT_EDUCATION_VALUE_SET = [codeSystem:"2.16.840.1.113883.11.20.9.34", codeSystemName:"Patient Education"]
 
-
+    public static final PROBLEMS_SECTION_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.2.5.1"]
+    public static final PROBLEM_CONCERN_ACT_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.3"]
+    public static final PROBLEM_OBSERVATION_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.4"]
+    public static final PROBLEM_STATUS_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.6"]
 
 
 }

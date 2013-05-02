@@ -3,13 +3,6 @@ package com.ids.ccda.sections
 import com.ids.ccda.oids.HL7_OID
 import groovy.xml.MarkupBuilder
 
-/**
- * Created with IntelliJ IDEA.
- * User: josh
- * Date: 3/15/13
- * Time: 10:37 AM
- * To change this template use File | Settings | File Templates.
- */
 class MedicationsSection {
     public static final TITLE = "Medications"
     public static final SECTION_CODE = [code:"10160-0", displayName:"HISTORY OF MEDICATION USE"] + HL7_OID.LOINC
@@ -107,7 +100,7 @@ class MedicationsSection {
               entryRelationship(typeCode:"SUBJ", inversionInd:"true"){
                   act(classCode:"ACT", moodCode:"INT"){
                       templateId(HL7_OID.INSTRUCTIONS_TEMPLATE_ID)
-                      code(["xsi:type":"CE", code: "311401005"] + HL7_OID.PATIENT_EDUCATION_VALUE_SET)
+                      code(["xsi:type":"CE", code: "409073007", displayName: "Education"] + HL7_OID.SNOMED)
                       text(){
                           reference(value:"instructions-${medication.uid}")
                           medication.instructions
