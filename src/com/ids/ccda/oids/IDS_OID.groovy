@@ -8,6 +8,9 @@ package com.ids.ccda.oids
  * To change this template use File | Settings | File Templates.
  */
 class IDS_OID {
+    //ORG.PRODUCT.DOCUMENT_TYPE.RECORD_ID
+    //OID, INTEGRITY_OID + EMR + DOC + TENANT + PATIENT + DATETIME
+
     static final IDS_ROOT = "2.16.840.1.113883.3.1048";
 
     static final IDS_EMR = "${IDS_ROOT}.1";
@@ -21,5 +24,5 @@ class IDS_OID {
     static final IDS_PATIENT_MRN = "${IDS_EMR_IDS}.2";
     static final IDS_PATIENT_PMS_ID = "${IDS_EMR_IDS}.3";
 
-
+    public static final FORMAT_DATE_OID = "yyyyMMddHHmmSS"
 }

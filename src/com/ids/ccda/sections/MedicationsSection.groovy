@@ -11,7 +11,7 @@ class MedicationsSection {
     def map
     MarkupBuilder builder
     def medications = [:]
-    def ATTRS = ["uid", "code", "name", "dosageQuantity", "dosageUnit", "startDate", "stopDate", "instructions"  ]
+    def ATTRS = ["uid", "code", "name", "route",/*code,name*/ "dosageQuantity", "dosageUnit", "startDate", "stopDate", "instructions"  ]
 
     MedicationsSection(builder, map =[:]) {
         this.builder = builder
@@ -79,11 +79,11 @@ class MedicationsSection {
                    period( value:"numeric time", unit:"unit of time abbreviation")//dynamic
                }  */
               //if we can map routes to the NCI thesaurus values, may-level
-              /* routeCode( code:"C00000",
+               routeCode( code: medication.route.code,
                           codeSystem:"2.16.840.1.113883.3.88.12.3221.8.7",
                           codeSystemName:"NCI Thesaurus",
-                          displayName:"CONCEPT NAME"
-               )   */
+                          displayName:medication.route.name
+               )
               doseQuantity( value:medication.dosageQuantity, unit:medication.dosageUnit)  //dynamic
               consumable(){     //MEDICATION INFORMATION TEMPLATE
                   manufacturedProduct(classCode:"MANU"){

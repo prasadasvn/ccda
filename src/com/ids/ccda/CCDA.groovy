@@ -3,19 +3,11 @@ package com.ids.ccda
 import com.ids.ccda.sections.AllergiesSection
 import groovy.xml.MarkupBuilder
 
-/**
- * Created with IntelliJ IDEA.
- * User: josh
- * Date: 3/7/13
- * Time: 12:48 PM
- * To change this template use File | Settings | File Templates.
- */
 class CCDA {
 
     def map
     StringWriter writer
     MarkupBuilder builder
-
 
     public static void main(String[] args) {
         def map = [:]

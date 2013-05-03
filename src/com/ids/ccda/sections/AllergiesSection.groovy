@@ -10,12 +10,14 @@ class AllergiesSection {
     public static final SECTION_CODE = [code:"48765-2", displayName:"Allergies, adverse reactions, alerts"] + HL7_OID.LOINC
     public static final ALLERGY_INTOLERANCE_CODE = [code:"ASSERTION",codeSystem:"2.16.840.1.113883.5.4"]
     def map
+    DocUid docUid
     def allergies = [:]
     MarkupBuilder builder
     def ALLERGY_ATTRS = [ "uid", "statusCode", "effectiveTimeLow", "effectiveTimeHigh", "reactionCode", "reactionName", "drugCode", "drugName" ]
 
     AllergiesSection( MarkupBuilder builder, map) {
         this.map = map
+        this.docUid = map.docUid
         this.allergies = map.allergies
         this.builder = builder
         generate()
@@ -25,10 +27,10 @@ class AllergiesSection {
       builder.component(){
           section(){
               templateId(HL7_OID.ALLERGIES_SECTION_TEMPLATE_ID)
-              code([code:"48765-2"] + HL7_OID.LOINC )
+              code( SECTION_CODE )
               title(TITLE)
               generateNormativeText()
-              allergies.each { allergy ->
+              allergies.each { id,allergy ->
                 generateEntry(allergy)
               }
           }
@@ -45,7 +47,7 @@ class AllergiesSection {
                       th("Status")
                   }
               }
-              allergies.each{ allergy ->
+              allergies.each{ id,allergy ->
                   tr(){
                       td(allergy.drugName)
                       td(){ content(ID:"reaction-${allergy.uid}"){allergy.reactionName}  }
@@ -57,11 +59,12 @@ class AllergiesSection {
       }
     }
 
-    def generateEntry(allergy = [:]){
+    def generateEntry(id,allergy = [:]){
+        def uid = docUid
         builder.entry(typeCode:"DRIV"){
                   act(classCode:"ACT", moodCode: "EVN"){
                       templateId(HL7_OID.ALLERGY_PROBLEM_ACT_TEMPLATE_ID)
-                      id(root:allergy.uid)    //dyanmic
+                      id(root:docUid)    //dyanmic
                       code( SECTION_CODE + HL7_OID.LOINC  )
                       statusCode(code: allergy.statusCode) // from active, suspended, aborted, completed  //dyanmic
                       effectiveTime(low: allergy.effectiveTimeLow, high: allergy.effectiveTimeHigh) //if statusCode is active, then use low only, if completed, then high

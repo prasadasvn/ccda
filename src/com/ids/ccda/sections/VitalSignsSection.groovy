@@ -1,5 +1,6 @@
 package com.ids.ccda.sections
 
+import com.ids.ccda.oids.HL7_OID
 import groovy.xml.MarkupBuilder
 
 /**
@@ -10,15 +11,21 @@ import groovy.xml.MarkupBuilder
  * To change this template use File | Settings | File Templates.
  */
 class VitalSignsSection {
+    public static final TITLE = "Vital Signs"
+    public static final SECTION_CODE = [code:"8716-3", displayName:"VITAL SIGNS"] + HL7_OID.LOINC
+    public static final VITAL_SIGNS_CODE = [code:"46680005", displayName: "Vital signs"] + HL7_OID.SNOMED
+
+    public static final HEIGHT = [code: "8302-2", displayName: "Height"]  + HL7_OID.LOINC
+    public static final WEIGHT = [code: "3141-9", displayName: "Weight"]   + HL7_OID.LOINC
+    public static final SYSTOLIC = [code: "8480-6", displayName: "BP Systolic"]   + HL7_OID.LOINC
+    public static final DIASTOLIC = [code: "8462-4", displayName: "BP Diastolic"]  + HL7_OID.LOINC
+    public static final BMI = [code: "39156-5", displayName: "BMI (Body Mass Index)"]   + HL7_OID.LOINC
+
     def map
     MarkupBuilder builder
     def ATTRS = ["uid", "date", "height", "weight", "systolic", "diastolic", "bmi"  ] //measurement, units
     def vitalSigns = [:]
-    def HEIGHT = [code: "8302-2", displayName: "Height"]
-    def WEIGHT = [code: "3141-9", displayName: "Weight"]
-    def SYSTOLIC = [code: "8480-6", displayName: "BP Systolic"]
-    def DIASTOLIC = [code: "8462-4", displayName: "BP Diastolic"]
-    def BMI = [code: "39156-5", displayName: "BMI (Body Mass Index)"]
+
 
 
     VitalSignsSection(builder, map =[:]) {
@@ -31,18 +38,13 @@ class VitalSignsSection {
     def generate(){
       builder.component(){
           section(){
-              templateId(root:"2.16.840.1.113883.10.20.22.2.4.1")
-              code(code:"8716-3",
-                   codeSystem:"2.16.840.1.113883.6.1",
-                   codeSystemName:"LOINC",
-                   displayName:"VITAL SIGNS"
-              )
-              title("Vital Signs")
+              templateId(HL7_OID.VITAL_SIGNS_TEMPLATE_ID)
+              code( SECTION_CODE )
+              title( TITLE )
               generateNormativeText()
               vitalSigns.each { vitalSign ->
                   generateEntry(vitalSign)
               }
-
           }
       }
     }
@@ -78,13 +80,9 @@ class VitalSignsSection {
       builder.entry( typeCode:"DRIV"){
         //VITAL SIGNS ORGANIZER TEMPLATE
           organizer(classCode:"CLUSTER", moodCode:"EVN"){
-              templateId(root:"2.16.840.1.113883.10.20.22.4.26")
+              templateId( HL7_OID.VITAL_SIGNS_ORGANIZER_TEMPLATE_ID)
               id(root:UUID.randomUUID())
-              code( code:"46680005",
-                    codeSystem:"2.16.840.1.113883.6.96",
-                    codeSystemName:" SNOMED-CT",
-                    displayName: "Vital signs"
-              )
+              code( VITAL_SIGNS_CODE )
               statusCode(code:"completed")
               effectiveTime(value:vitalSign.date)
               generateVitalSignObservation(vitalSign, HEIGHT, vitalSign.height )
@@ -101,25 +99,19 @@ class VitalSignsSection {
         builder.component(){
             //VITAL SIGNS OBSERVATION
             observation(classCode:"OBS", moodCode:"EVN")
-            templateId(root:"2.16.840.1.113883.10.20.22.4.27")
+            templateId(HL7_OID.VITAL_SIGN_OBSERVATION_TEMPLATE_ID)
             id(root:UUID.randomUUID())
-            code( vitalSignsResultType(vitalSignType) )
-            text(){
-                reference(value:"#vitalSign-${vitalSign.uid}")
-            }
+            code( vitalSignType )
+            text(){ reference(value:"#vitalSign-${vitalSign.uid}")  }
             statusCode(code:"completed")
             effectiveTime(value:vitalSign.date)
             value( "xsi:type":"PQ",
                     value: measure.measurement,
                     unit: measure.units
             )
-            interpretationCode(code:"N",
-                    codeSystem:"2.16.840.1.113883.5.83"
-            )
+            interpretationCode(code:"N", codeSystem:"2.16.840.1.113883.5.83" )
         }
     }
 
-    def vitalSignsResultType(map = [:]){
-        return map + [codeSytem: "2.16.840.1.113883.6.1", codeSystemName:"LOINC"]
-    }
+
 }

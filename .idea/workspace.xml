@@ -14,9 +14,9 @@
     <file path="/MaritalStatus.java" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1363205082358" ignored="false" />
     <file path="/CCDA.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1366749595257" ignored="false" />
     <file path="/CCDBody.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1363362707084" ignored="false" />
-    <file path="/MedicationsSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367516192380" ignored="false" />
-    <file path="/CDABody.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1366231518404" ignored="false" />
-    <file path="/AllergiesSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367415447046" ignored="false" />
+    <file path="/MedicationsSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367605675934" ignored="false" />
+    <file path="/CDABody.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367597865624" ignored="false" />
+    <file path="/AllergiesSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367600266794" ignored="false" />
     <file path="$PROJECT_DIR$/../SledgeHammer/grails-app/services/com/ids/emr/server/erx/RcopiaErxService.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1363726790507" ignored="false" />
     <file path="$PROJECT_DIR$/../SledgeHammer/grails-app/controllers/com/ids/emr/encounter/EncounterController.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1363726801491" ignored="false" />
     <file path="/fragment.java" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367262423324" ignored="false" />
@@ -26,9 +26,9 @@
     <file path="/SocialHistorySection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367525271973" ignored="false" />
     <file path="/ResultsSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367523733352" ignored="false" />
     <file path="/result_status.txt" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1365092652656" ignored="false" />
-    <file path="/VitalSignsSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1366212931276" ignored="false" />
+    <file path="/VitalSignsSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367526490770" ignored="false" />
     <file path="/ImmunizationsSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367418071900" ignored="false" />
-    <file path="/HL7_OID.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367525146774" ignored="false" />
+    <file path="/HL7_OID.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367526219012" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/relaxng.rng" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367288828539" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/catalog.xsd" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367288828539" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/xml.xsd" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367288828539" ignored="false" />
@@ -36,6 +36,8 @@
     <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/xslt-1_0.xsd" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367288828539" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/xinclude.xsd" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367288828539" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/XMLSchema.xsd" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367288828539" ignored="false" />
+    <file path="/IDS_OID.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367595029847" ignored="false" />
+    <file path="/DocUid.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367595775671" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,13 +99,24 @@
     <favorites_list name="CCDA" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.20825274">
+    <splitter split-orientation="horizontal" split-proportion="0.1">
       <split-first>
         <leaf>
           <file leaf-file-name="CDABody.groovy" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/CDABody.groovy">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="78" column="65" selection-start="3731" selection-end="3731" vertical-scroll-proportion="0.0">
+                <state line="89" column="18" selection-start="4145" selection-end="4145" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="e#22#66#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="DocUid.groovy" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/documents/ccd/uid/DocUid.groovy">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="21" column="34" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -112,7 +125,16 @@
           <file leaf-file-name="CCDA.groovy" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/CCDA.groovy">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="22" column="39" selection-start="469" selection-end="469" vertical-scroll-proportion="0.3363029">
+                <state line="31" column="53" selection-start="1230" selection-end="1230" vertical-scroll-proportion="0.53892213">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="GeneralHeaderTemplate.groovy" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/GeneralHeaderTemplate.groovy">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="235" column="0" selection-start="9465" selection-end="9835" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -121,24 +143,24 @@
         </leaf>
       </split-first>
       <split-second>
-        <splitter split-orientation="horizontal" split-proportion="0.79197377">
+        <splitter split-orientation="horizontal" split-proportion="0.800692">
           <split-first>
-            <splitter split-orientation="vertical" split-proportion="0.33191034">
+            <splitter split-orientation="vertical" split-proportion="0.1">
               <split-first>
                 <leaf>
-                  <file leaf-file-name="IDS_OID.groovy" pinned="false" current="false" current-in-tab="false">
+                  <file leaf-file-name="IDS_OID.groovy" pinned="false" current="false" current-in-tab="true">
                     <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/oids/IDS_OID.groovy">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="10" column="50" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0">
+                        <state line="26" column="57" selection-start="802" selection-end="802" vertical-scroll-proportion="2.2121212">
                           <folding />
                         </state>
                       </provider>
                     </entry>
                   </file>
-                  <file leaf-file-name="HL7_OID.groovy" pinned="false" current="false" current-in-tab="true">
+                  <file leaf-file-name="HL7_OID.groovy" pinned="false" current="false" current-in-tab="false">
                     <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/oids/HL7_OID.groovy">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="18" column="95" selection-start="972" selection-end="972" vertical-scroll-proportion="0.36585367">
+                        <state line="10" column="4" selection-start="199" selection-end="265" vertical-scroll-proportion="0.0">
                           <folding />
                         </state>
                       </provider>
@@ -151,17 +173,39 @@
                   <file leaf-file-name="AllergiesSection.groovy" pinned="false" current="false" current-in-tab="false">
                     <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/sections/AllergiesSection.groovy">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="8" column="0" selection-start="202" selection-end="501" vertical-scroll-proportion="0.0">
+                        <state line="58" column="47" selection-start="1885" selection-end="1885" vertical-scroll-proportion="0.0">
                           <folding />
                         </state>
                       </provider>
                     </entry>
                   </file>
-                  <file leaf-file-name="ResultsSection.groovy" pinned="false" current="true" current-in-tab="true">
+                  <file leaf-file-name="MedicationsSection.groovy" pinned="false" current="true" current-in-tab="true">
+                    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/sections/MedicationsSection.groovy">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="39" column="82" selection-start="1125" selection-end="1125" vertical-scroll-proportion="0.7222222">
+                          <folding>
+                            <element signature="e#31#63#0" expanded="true" />
+                          </folding>
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="ResultsSection.groovy" pinned="false" current="false" current-in-tab="false">
                     <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/sections/ResultsSection.groovy">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="6" column="0" selection-start="120" selection-end="255" vertical-scroll-proportion="0.12931034">
+                        <state line="10" column="105" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0">
                           <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="VitalSignsSection.groovy" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/sections/VitalSignsSection.groovy">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="111" column="53" selection-start="4389" selection-end="4411" vertical-scroll-proportion="0.0">
+                          <folding>
+                            <element signature="e#31#63#0" expanded="true" />
+                          </folding>
                         </state>
                       </provider>
                     </entry>
@@ -175,7 +219,7 @@
               <file leaf-file-name="CCDA_CCD_b1_Ambulatory_v2.xml" pinned="false" current="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/CCDA_CCD_b1_Ambulatory_v2.xml">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="3075" column="27" selection-start="137190" selection-end="137190" vertical-scroll-proportion="0.7113402">
+                    <state line="3075" column="27" selection-start="137190" selection-end="137190" vertical-scroll-proportion="0.016703786">
                       <folding />
                     </state>
                   </provider>
@@ -198,29 +242,29 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/OIDS.groovy" />
-        <option value="$PROJECT_DIR$/test.xml" />
         <option value="$PROJECT_DIR$/Greenway_example_CCDA.xml" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/CDABody.groovy" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/oids/IDS_OID.groovy" />
         <option value="$PROJECT_DIR$/CCDA_CCD_b1_Ambulatory_v2.xml" />
         <option value="$PROJECT_DIR$/src/com/ids/ccda/GeneralHeaderTemplate.groovy" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/CCDA.groovy" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/sections/AllergiesSection.groovy" />
         <option value="$PROJECT_DIR$/src/com/ids/ccda/sections/ImmunizationsSection.groovy" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/sections/MedicationsSection.groovy" />
         <option value="$PROJECT_DIR$/src/com/ids/ccda/sections/ProblemsSection.groovy" />
         <option value="$PROJECT_DIR$/src/com/ids/ccda/sections/ProceduresSection.groovy" />
         <option value="$PROJECT_DIR$/src/com/ids/ccda/sections/ResultsSection.groovy" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/oids/HL7_OID.groovy" />
         <option value="$PROJECT_DIR$/src/com/ids/ccda/sections/SocialHistorySection.groovy" />
+        <option value="$PROJECT_DIR$/src/com/ids/ccda/oids/HL7_OID.groovy" />
+        <option value="$PROJECT_DIR$/src/com/ids/ccda/sections/VitalSignsSection.groovy" />
+        <option value="$PROJECT_DIR$/src/com/ids/ccda/CCDA.groovy" />
+        <option value="$PROJECT_DIR$/src/com/ids/ccda/oids/IDS_OID.groovy" />
+        <option value="$PROJECT_DIR$/src/com/ids/ccda/documents/ccd/uid/DocUid.groovy" />
+        <option value="$PROJECT_DIR$/src/com/ids/ccda/CDABody.groovy" />
+        <option value="$PROJECT_DIR$/src/com/ids/ccda/sections/AllergiesSection.groovy" />
+        <option value="$PROJECT_DIR$/src/com/ids/ccda/sections/MedicationsSection.groovy" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="64" />
+    <option name="x" value="1919" />
     <option name="y" value="-4" />
-    <option name="width" value="1857" />
+    <option name="width" value="1922" />
     <option name="height" value="1085" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -265,6 +309,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -341,14 +386,39 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="oids" />
+              <option name="myItemId" value="ccd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CCDA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CCDA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ccda" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ccd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uid" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -365,9 +435,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -527,16 +597,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
+    <frame x="1919" y="-4" width="1922" height="1085" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32870865" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1514649" sideWeight="0.32692307" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14262024" sideWeight="0.67129135" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13927428" sideWeight="0.67129135" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1514649" sideWeight="0.33760685" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -547,6 +616,7 @@
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32870865" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -620,34 +690,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Greenway_example_CCDA.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="876" column="18" selection-start="57159" selection-end="57159" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NIST_CCDA.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="506" column="84" selection-start="18490" selection-end="18490" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/CDABody.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="65" selection-start="3731" selection-end="3731" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/GeneralHeaderTemplate.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="227" column="51" selection-start="9341" selection-end="9341" vertical-scroll-proportion="6.4553013">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/sections/ImmunizationsSection.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="54" selection-start="174" selection-end="174" vertical-scroll-proportion="0.24940617">
@@ -657,34 +699,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/CCDA.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="39" selection-start="469" selection-end="469" vertical-scroll-proportion="0.3363029">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/oids/IDS_OID.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="50" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/address_use.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/sections/MedicationsSection.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="52" selection-start="3513" selection-end="3513" vertical-scroll-proportion="0.06921241">
-          <folding>
-            <element signature="e#31#63#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/sections/ProblemsSection.groovy">
@@ -703,23 +720,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/sections/AllergiesSection.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="202" selection-end="501" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CCDA_CCD_b1_Ambulatory_v2.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3075" column="27" selection-start="137190" selection-end="137190" vertical-scroll-proportion="0.7113402">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/oids/HL7_OID.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="95" selection-start="972" selection-end="972" vertical-scroll-proportion="0.36585367">
+        <state line="3075" column="27" selection-start="137190" selection-end="137190" vertical-scroll-proportion="0.016703786">
           <folding />
         </state>
       </provider>
@@ -735,8 +738,77 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/sections/ResultsSection.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="120" selection-end="255" vertical-scroll-proportion="0.12931034">
+        <state line="10" column="105" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/GeneralHeaderTemplate.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="235" column="0" selection-start="9465" selection-end="9835" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/oids/HL7_OID.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="4" selection-start="199" selection-end="265" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/oids/IDS_OID.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="57" selection-start="802" selection-end="802" vertical-scroll-proportion="2.2121212">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/sections/VitalSignsSection.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="53" selection-start="4389" selection-end="4411" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#31#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/CDABody.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="18" selection-start="4145" selection-end="4145" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#22#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/documents/ccd/uid/DocUid.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="34" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/CCDA.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="53" selection-start="1230" selection-end="1230" vertical-scroll-proportion="0.53892213">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/sections/AllergiesSection.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="47" selection-start="1885" selection-end="1885" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/sections/MedicationsSection.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="82" selection-start="1125" selection-end="1125" vertical-scroll-proportion="0.7222222">
+          <folding>
+            <element signature="e#31#63#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

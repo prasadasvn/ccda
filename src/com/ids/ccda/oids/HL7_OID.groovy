@@ -58,4 +58,8 @@ class HL7_OID {
     public static final SOCIAL_HISTORY_SECTION_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.2.17"]
     public static final SMOKING_STATUS_OBSERVATION_TEMPLATE_ID = [root:"2.16.840.1.113883.10.22.4.78"]
 
+    public static final VITAL_SIGNS_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.2.4.1"]
+    public static final VITAL_SIGNS_ORGANIZER_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.26"]
+    public static final VITAL_SIGN_OBSERVATION_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.27"]
+
 }
