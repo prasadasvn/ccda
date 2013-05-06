@@ -1,5 +1,6 @@
 package com.ids.ccda.sections
 
+import com.ids.ccda.documents.ccd.uid.DocUid
 import com.ids.ccda.oids.HL7_OID
 import groovy.xml.MarkupBuilder
 
@@ -7,17 +8,20 @@ class SocialHistorySection {
     public static final TITLE = "Social History"
     public static final SECTION_CODE = [code:"29762-2", displayName:"SOCIAL HISTORY"] + HL7_OID.LOINC
     public static final SMOKING_STATUS_OBSERVATION_CODE = [code:"ASSERTION"] + HL7_OID.ACT_CODE
+    public static final SECTION = "socialHistory"
 
     def map
+    DocUid docUid
     def socialHistoryElements = [:]
     MarkupBuilder builder
-    def ATTRS = ["uid", "type", "dates"/*startDate,endDate*/,  "snomed" /*code,displayName */ ]
+    def ATTRS = [ "type", "dates"/*startDate,endDate*/,  "snomed" /*code,displayName */ ]
 
 
     SocialHistorySection(builder, map =[:]) {
-        this.builder = builder
         this.map = map
+        this.docUid = map.docUid
         this.socialHistoryElements = map.socialHistoryElements
+        this.builder = builder
         generate()
     }
 
@@ -28,8 +32,8 @@ class SocialHistorySection {
               code( SECTION_CODE )
               title( TITLE )
               generateNormativeText()
-              socialHistoryElements.each { socialHistoryElement ->
-                generateEntry(socialHistoryElement)
+              socialHistoryElements.each { id, socialHistoryElement ->
+                generateEntry(id, socialHistoryElement)
               }
           }
       }
@@ -46,9 +50,10 @@ class SocialHistorySection {
                         th("To Date")
                     }
                 }
-                socialHistoryElements.each{ socialHistoryElement ->
+                socialHistoryElements.each{ id, socialHistoryElement ->
+                    def uid = docUid.secId(SECTION,id)
                     tr(){
-                        td(){ content(ID:"socialHistoryElement-${socialHistoryElement.uid}"){socialHistoryElement.type} }//dynamic
+                        td(){ content(ID:"socialHistoryElement-${uid}"){socialHistoryElement.type} }//dynamic
                         td(socialHistoryElement.snomed.displayName) //dynamic
                         td(socialHistoryElement.dates.startDate)  //dynamic
                         td(socialHistoryElement.dates.endDate)  //dynamic
@@ -58,7 +63,8 @@ class SocialHistorySection {
         }
     }
 
-    def generateEntry( socialHistoryElement = [:]){
+    def generateEntry( socialHistoryId, socialHistoryElement = [:]){
+      def uid = docUid.secId(SECTION,socialHistoryId)
       builder.entry( typeCode:"DRIV"){
           // Social history section template
           observation(classCode:"OBS", moodCode:"EVN"){

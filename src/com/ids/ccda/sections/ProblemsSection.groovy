@@ -1,5 +1,6 @@
 package com.ids.ccda.sections
 
+import com.ids.ccda.documents.ccd.uid.DocUid
 import com.ids.ccda.oids.HL7_OID
 import groovy.xml.MarkupBuilder
 
@@ -9,15 +10,18 @@ class ProblemsSection {
     public static final CONCERN_CODE = [code:"CONC",displayName:"Concern"] + HL7_OID.ACT_CLASS
     public static final PROBLEM_CODE = [code:"55607006",  displayName:"Problem"] + HL7_OID.SNOMED  //codeSystem: "2.16.840.1.113883.6.96",
     public static final PROBLEM_STATUS_CODE = [code:"33999-4", displayName: "Status"] + HL7_OID.LOINC
-
+    public static final SECTION = "problems"
+    def ATTRS = [ "code", "name", "statusCode", "statusName", "onsetDate", "resolutionDate" ]
 
     def map
+    DocUid docUid
     MarkupBuilder builder
     def problems = [:]
-    def ATTRS = ["uid", "code", "name", "statusCode", "statusName", "onsetDate", "resolutionDate" ]
+
 
     ProblemsSection(builder, map =[:]) {
         this.builder = builder
+        this.docUid = map.docUid
         this.map = map
         this.problems = this.map.problems
         generate()
@@ -30,8 +34,8 @@ class ProblemsSection {
               code( SECTION_CODE )
               title(TITLE)
               generateNormativeText()
-              problems.each { problem ->
-                generateEntry(problem)
+              problems.each { id, problem ->
+                generateEntry(id, problem)
               }
           }
       }
@@ -41,32 +45,34 @@ class ProblemsSection {
         builder.text(){
           content("ID":"problems")
           list(listType:"ordered"){
-            problems.each { problem ->
-              item(){
-                  content("ID":"problem-${problem.uid}" ){problem.name}
-                  content("ID":"status-${problem.uid}" ){"Status: ${problem.statusName}"}
+            problems.each { id,problem ->
+               def uid = docUid.secId(SECTION,id)
+                item(){
+                  content("ID":"problem-${uid}" ){problem.name}
+                  content("ID":"status-${uid}" ){"Status: ${problem.statusName}"}
               }
             }
           }
         }
     }
 
-    def generateEntry( problem = [:]){
-      builder.entry(){
+    def generateEntry( problemId,problem = [:]){
+        def uid = docUid.secId(SECTION,problemId)
+        builder.entry(){
           // PROBLEM CONCERN ACT TEMPLATE
         entry(typeCode:"DRIV"){
             act(classCode:"ACT", moodCode:"ENV"){
                 templateId(HL7_OID.PROBLEM_CONCERN_ACT_TEMPLATE_ID)
-                id(root: problem.uid)  //dynamic
+                id(root: uid)  //dynamic
                 code(CONCERN_CODE)
                 statusCode(code: problem.status) //dynamic //from list of active, suspended, aborted, completed
                 generateEffectiveTime(problem.activeDates)
                 entryRelationship(typeCode:"REFR"){
                     observation(classCode:"OBS", moodCode:"ENV"){
                         templateId(HL7_OID.PROBLEM_OBSERVATION_TEMPLATE_ID)
-                        id(root:UUID.randomUUID())
+                        id(root:docUid.probObsId(problemId))
                         code(PROBLEM_CODE) //static, could be dynamic
-                        text(){ reference(value:"#problem-${problem.uid}") }
+                        text(){ reference(value:"#problem-${uid}") }
                         statusCode(code:"completed")
                         generateEffectiveTime(problem.observedDates)
                         //low shall be present
@@ -77,7 +83,7 @@ class ProblemsSection {
                                 templateId(HL7_OID.PROBLEM_STATUS_TEMPLATE_ID)
                                 id(root:UUID.randomUUID())
                                 code(PROBLEM_STATUS_CODE)
-                                text(){ reference(value:"#status-${problem.uid}") }
+                                text(){ reference(value:"#status-${uid}") }
                                 statusCode(code:"completed")
                                 value(["xsi:type":"CD", code: problem.statusCode,displayName:problem.statusName] + HL7_OID.SNOMED)
                                 /*

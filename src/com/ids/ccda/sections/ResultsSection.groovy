@@ -1,37 +1,41 @@
 package com.ids.ccda.sections
 
+import com.ids.ccda.documents.ccd.uid.DocUid
 import com.ids.ccda.oids.HL7_OID
 import groovy.xml.MarkupBuilder
 
 class ResultsSection {
     public static final TITLE = "Results"
     public static final SECTION_CODE = [code:"30954-2",displayName:"RESULTS"] + HL7_OID.LOINC
+    public static final SECTION = "results"
 
     def map
+    DocUid docUid
     MarkupBuilder builder
     def results = [:]
-    def ATTRS = ["uid", "snomed" /*code, displayName*/, "observations", "status"  ]
-    def OBSERVATION_ATTRS = ["uid", "code", /*code, displayName, codeSystem, codeSystemName  -- should be LOINC for Labs and LOINC or SNOMED for others*/
+    def ATTRS = [ "snomed" /*code, displayName*/, "observations", "status"  ]
+    def OBSERVATION_ATTRS = ["code", /*code, displayName, codeSystem, codeSystemName  -- should be LOINC for Labs and LOINC or SNOMED for others*/
             "status", "effectiveTime", "value" /*value, unit */  ]
 
     //pending results should use the status of active
 
     ResultsSection(builder, map =[:]) {
-        this.builder = builder
         this.map = map
-        this.results = this.map.results
+        this.docUid = map.docUid
+        this.results = map.results
+        this.builder = builder
         generate()
     }
 
     def generate(){
       builder.component(){
           section(){
-              templateId()
+              templateId(HL7_OID.RESULTS_SECTION_TEMPLATE_ID)
               code( SECTION_CODE )
               title(TITLE)
               generateNormativeText()
-              results.each { result ->
-                generateEntry(result)
+              results.each { id, result ->
+                generateEntry(id, result)
               }
           }
       }
@@ -41,23 +45,25 @@ class ResultsSection {
         builder.text(){
             table(border:"1", width:"100%"){
                 thead(){
-                    tr(){ td(){}  }
+                    tr(){ td(){}  } //TODO:What needs to go here?
                 }
-                results.each{ result ->
+                results.each{ id,result ->
+                    def uid = docUid.secId(SECTION,id)
                     tr(){
-                        td(){ content(ID:"result-${result.uid}"){result.name}  }
+                        td(){ content(ID:"result-${uid}"){result.name}  }
                     }
                 }
             }
         }
     }
 
-    def generateEntry( result = [:]){
+    def generateEntry(resultId, result = [:]){
+      def uid = docUid.secId(SECTION,resultId)
       builder.entry( typeCode:"DRIV"){
           // RESULTS ORGANIZER TEMPLATE
-         organizaer(class:"BATTERY", moodCode:"EVN"){
+         organizer(class:"BATTERY", moodCode:"EVN"){
              templateId(root:"2.16.840.1.113883.10.20.22.4.1")
-             id(root:result.uuid)
+             id(root:uid)
              code("xsi:type":"CE",
                   code:result.snomed.code, //dynamic
                   displayName: result.snomed.displayName, //dynamic
@@ -67,7 +73,7 @@ class ResultsSection {
              component(){
                  //RESULT OBSERVATION TEMPLATES
                  result.observations.each { o ->
-                     generateObservation(result.uid, o)
+                     generateObservation(uid, o)
                  }
              }
          }
@@ -77,7 +83,7 @@ class ResultsSection {
     def generateObservation(resultUid, obsResult = [:]){
         builder.observation(classCode:"OBS", moodCode:"EVN"){
             templateId(root:"2.16.840.1.113883.10.20.22.4.2")
-            id(root:obsResult.uid)  //dynamic
+            id(root:UUID.randomUUID())
 
             code("xsi:type":"CE",
                     code:obsResult.code.code, //dynamic

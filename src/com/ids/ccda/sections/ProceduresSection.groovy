@@ -1,5 +1,6 @@
 package com.ids.ccda.sections
 
+import com.ids.ccda.documents.ccd.uid.DocUid
 import com.ids.ccda.oids.HL7_OID
 import groovy.xml.MarkupBuilder
 
@@ -7,14 +8,17 @@ import groovy.xml.MarkupBuilder
 class ProceduresSection {
     public static final TITLE = "Procedures"
     public static final SECTION_CODE = [code:"47519-4", displayName:"HISTORY OF PROCEDURES"] + HL7_OID.LOINC
+    public static final SECTION = "procedures"
+    def ATTRS = [ "code", "name", "date", "bodySiteCode", "bodySiteName", "performer"  ]
 
     def map
+    DocUid docUid
     MarkupBuilder builder
     def procedures = [:]
-    def ATTRS = ["uid",  "code", "name", "date", "bodySiteCode", "bodySiteName", "performer"  ]
 
     ProceduresSection(builder, map =[:]) {
         this.builder = builder
+        this.docUid = map.docUid
         this.map = map
         this.procedures = this.map.procedures
         generate()
@@ -27,7 +31,7 @@ class ProceduresSection {
               code( SECTION_CODE )
               title( TITLE )
               generateNormativeText()
-              procedures.each { procedure ->
+              procedures.each { id, procedure ->
                 generateEntry(procedure)
               }
           }
@@ -43,9 +47,10 @@ class ProceduresSection {
                         th("Date")
                     }
                 }
-                procedures.each{ procedure ->
+                procedures.each{ id, procedure ->
+                    def uid = docUid.secId(SECTION,id)
                     tr(){
-                        td(){ content(ID:"procedure-${procedure.uid}"){procedure.name}  }
+                        td(){ content(ID:"procedure-${uid}"){procedure.name}  }
                         td(procedure.date)
                     }
                 }
@@ -53,14 +58,15 @@ class ProceduresSection {
         }
     }
 
-    def generateEntry( pro = [:]){
+    def generateEntry( procedureId, pro = [:]){
+      def uid = docUid.secId(SECTION,procedureId)
       builder.entry( typeCode:"DRIV"){
         //PROCEDURE ACTIVITY PROCEDURE
           procedure(classCode:"PROC", moodCode:"EVN"){
               templateId(HL7_OID.PROCEDURE_ACTIVITY_PROCEDURE_TEMPLATE_ID)
-              id(root: pro.uid)    //dynamic
+              id(root: uid)    //dynamic
               code([code: pro.code, displayName: pro.name ] + HL7_OID.SNOMED ){ //dynamic
-                   originalText(){ reference(value:"#procedure-${pro.uid}")  }
+                   originalText(){ reference(value:"#procedure-${uid}")  }
               }
               statusCode(code:"completed")//since this is a history, it would be completed, but could contain aborted,active,cancelled, or completed
               effectiveTime(value:pro.date)
@@ -71,16 +77,16 @@ class ProceduresSection {
                              codeSystemName:"Body Site Value Set")
               performer(){
                   assignedEntity(){
-                      id(root:HL7_OID.NPI, pro.performer.npi)  //dynamic
+                      id(root:HL7_OID.NPI, pro.performer?.npi)  //dynamic
                       addr(use:"PUB" ){
-                          streetAddressLine(pro.performer.addressLine1)   //dynamic
-                          streetAddressLine(pro.performer.addressLine2)  //dynamic
-                          city(pro.performer.city)     //dynamic
-                          state(pro.performer.state)    //dynamic
-                          postalCode(pro.performer.zipCode)  //dynamic
+                          streetAddressLine(pro.performer?.addressLine1)   //dynamic
+                          streetAddressLine(pro.performer?.addressLine2)  //dynamic
+                          city(pro.performer?.city)     //dynamic
+                          state(pro.performer?.state)    //dynamic
+                          postalCode(pro.performer?.zipCode)  //dynamic
                           country("US")
                       }
-                      telecom( value: "tel:${pro.performer.phone}", use: "WP"  )   //dynamic
+                      telecom( value: "tel:${pro.performer?.phone}", use: "WP"  )   //dynamic
                   }
               }
 

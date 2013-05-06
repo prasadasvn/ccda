@@ -22,9 +22,10 @@ class CDABody {
 
     CDABody(map) {
         this.map = map
-        docUid = new DocUid("${IDS_OID.IDS_CLINICAL_SUMMARY}.1.1234.${(new Date()).format(IDS_OID.FORMAT_DATE_OID)}")  //TODO: To be replaced
-        map.docUid = docUid
+        initDocUid()
     }
+
+
 
     public static void main(String[] args) {
         def map = [:]
@@ -47,11 +48,11 @@ class CDABody {
         ]
 
         map.medications = [
-                "${id()}": [  code: "RxNorm1", name: "A Drug 1",
+                "${id()}": [  code: "RxNorm1", name: "A Drug 1",  routeCode: "Route Code 1", routeName: "Route Name 1",
                         startDate: "20130114", stopDate: "20130214",
                   instructions: "1 drop, into both eyes, twice a day"],
 
-                "${id()}":[  code: "RxNorm2", name: "A Drug 2",
+                "${id()}":[  code: "RxNorm2", name: "A Drug 2", routeCode: "Route Code 2", routeName: "Route Name 2",
                         startDate: "20121005", stopDate: "",
                         instructions: "1 drop, into left eye, once a day"],
         ]
@@ -132,6 +133,7 @@ class CDABody {
     CDABody( MarkupBuilder builder, map = [:]) {
         this.map = map
         this.builder = builder
+        initDocUid()
         generate()
     }
 
@@ -149,6 +151,11 @@ class CDABody {
 
             }
         }
+    }
+
+    private initDocUid(){
+        docUid = new DocUid("${IDS_OID.IDS_CLINICAL_SUMMARY}.1.1234.${(new Date()).format(IDS_OID.FORMAT_DATE_OID)}")  //TODO: To be replaced
+        map.docUid = docUid
     }
 
     // Need globally unique OID, INTEGRITY_OID + EMR + DOC + TENANT + PATIENT + DATETIME

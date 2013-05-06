@@ -1,20 +1,23 @@
 package com.ids.ccda.sections
 
+import com.ids.ccda.documents.ccd.uid.DocUid
 import com.ids.ccda.oids.HL7_OID
 import groovy.xml.MarkupBuilder
 
 class ImmunizationsSection {
     public static final TITLE = "Immunizations"
+    public static final SECTION_CODE = [code:"11369-6", displayName:"HISTORY OF IMMUNIZATIONS"] + HL7_OID.LOINC
+    public static final SECTION = "immunizations"
+    def ATTRS = [ "code", "name", "date"  ]
 
     def map
+    DocUid docUid
     MarkupBuilder builder
     def immunizations = [:]
 
-    def ATTRS = ["uid", "code", "name", "date"  ]
-    def SECTION_CODE = [code:"11369-6", displayName:"HISTORY OF IMMUNIZATIONS"] + HL7_OID.LOINC
-
     ImmunizationsSection(builder, map =[:]) {
         this.builder = builder
+        this.docUid = map.docUid
         this.map = map
         this.immunizations = this.map.immunizations
         generate()
@@ -27,8 +30,8 @@ class ImmunizationsSection {
               code( SECTION_CODE )
               title( TITLE )
               generateNormativeText()
-              immunizations.each { immunization ->
-                generateEntry(immunization)
+              immunizations.each { id, immunization ->
+                generateEntry(id, immunization)
               }
           }
       }
@@ -45,11 +48,10 @@ class ImmunizationsSection {
                         th("Status")
                     }
                 }
-                immunizations.each{ immunization ->
+                immunizations.each{ id,immunization ->
+                    def uid = docUid.secId(SECTION,id)
                     tr(){
-                        td(){
-                            content(ID:"immunization-${immunization.uid}"){immunization.name}
-                        }
+                        td(){ content(ID:"immunization-${uid}"){immunization.name} }
                         td(immunization.date)
                         td("Completed")
                     }
@@ -58,13 +60,14 @@ class ImmunizationsSection {
         }
     }
 
-    def generateEntry( immunization = [:]){
+    def generateEntry(immunizationId, immunization = [:]){
+      def uid = docUid.secId(SECTION,immunizationId)
       builder.entry( typeCode:"DRIV"){
           //Immunization Activity Template
           substanceAdministration(classCode:"SBADM", moodCode:"EVN", negationInd:"false"){
             templateId(HL7_OID.IMMUNIZATION_ACTIVITY_TEMPLATE_ID)
-            id(root:UUID.randomUUID())
-            text(){ reference(value:"#$immunization-${immunization.uid}") }
+            id(root:uid)
+            text(){ reference(value:"#$immunization-${uid}") }
             status(code:"completed")
             effectiveTime("xsi:type":"IVL_TS", value:immunization.date)
             //Immunization Medication Information
@@ -82,7 +85,7 @@ class ImmunizationsSection {
       }
     }
 
-    def immunizationCode(map = [:]){
+    private def immunizationCode(map = [:]){
         return map + HL7_OID.CVX
     }
 }
