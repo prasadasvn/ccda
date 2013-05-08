@@ -47,9 +47,9 @@ class ProblemsSection {
           list(listType:"ordered"){
             problems.each { id,problem ->
                def uid = docUid.secId(SECTION,id)
-                item(){
-                  content("ID":"problem-${uid}" ){problem.name}
-                  content("ID":"status-${uid}" ){"Status: ${problem.statusName}"}
+                item{
+                  content("ID":"problem-${uid}",problem.name)
+                  content("ID":"status-${uid}","Status: ${problem.statusName}")
               }
             }
           }
@@ -72,7 +72,7 @@ class ProblemsSection {
                         templateId(HL7_OID.PROBLEM_OBSERVATION_TEMPLATE_ID)
                         id(root:docUid.probObsId(problemId))
                         code(PROBLEM_CODE) //static, could be dynamic
-                        text(){ reference(value:"#problem-${uid}") }
+                        //text(){ reference(value:"#problem-${uid}") }
                         statusCode(code:"completed")
                         generateEffectiveTime(problem.observedDates)
                         //low shall be present
@@ -83,7 +83,7 @@ class ProblemsSection {
                                 templateId(HL7_OID.PROBLEM_STATUS_TEMPLATE_ID)
                                 id(root:UUID.randomUUID())
                                 code(PROBLEM_STATUS_CODE)
-                                text(){ reference(value:"#status-${uid}") }
+                                //text(){ reference(value:"#status-${uid}") }
                                 statusCode(code:"completed")
                                 value(["xsi:type":"CD", code: problem.statusCode,displayName:problem.statusName] + HL7_OID.SNOMED)
                                 /*

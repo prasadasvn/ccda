@@ -13,7 +13,8 @@ class DocUid {
                     problems: "4",
                     results: "5",
                     socialHistory: "6",
-                    vitalSigns: "7"
+                    vitalSigns: "7",
+                    plans: "8"
             ]
     ]
     DocUid(root) {
@@ -34,6 +35,26 @@ class DocUid {
 
     def probObsId(id = UNKNOWN){
         "${root}.${DOCS.section.problems}.1.${id}"
+    }
+
+    def resultObsId(id = UNKNOWN){
+        "${root}.${DOCS.section.results}.1.${id}"
+    }
+
+    def planEncounterId(id = UNKNOWN){
+        "${root}.${DOCS.section.plans}.1.${id}"
+    }
+
+    def planObservationId(id = UNKNOWN){
+        "${root}.${DOCS.section.plans}.2.${id}"
+    }
+
+    def planProcedureId(id = UNKNOWN){
+        "${root}.${DOCS.section.plans}.3.${id}"
+    }
+
+    def planInstructionId(id = UNKNOWN){
+        "${root}.${DOCS.section.plans}.4.${id}"
     }
 
     public static void main(String[] args) {

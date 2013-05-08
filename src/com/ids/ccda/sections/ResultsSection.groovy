@@ -13,9 +13,12 @@ class ResultsSection {
     DocUid docUid
     MarkupBuilder builder
     def results = [:]
-    def ATTRS = [ "snomed" /*code, displayName*/, "observations", "status"  ]
-    def OBSERVATION_ATTRS = ["code", /*code, displayName, codeSystem, codeSystemName  -- should be LOINC for Labs and LOINC or SNOMED for others*/
-            "status", "effectiveTime", "value" /*value, unit */  ]
+    def ATTRS = [ "resultCode", "resultDisplayName", "observations", "status",
+            "observationLoincCode", "observationSnomedCode", "observationDisplayName" ,
+            "observationStatus", "observationEffectiveTime", "observationValue", "observationUnit"
+            ]
+/*    def OBSERVATION_ATTRS = ["code", *//*code, displayName, codeSystem, codeSystemName  -- should be LOINC for Labs and LOINC or SNOMED for others*//*
+            "status", "effectiveTime", "value" *//*value, unit *//*  ]*/
 
     //pending results should use the status of active
 
@@ -49,8 +52,8 @@ class ResultsSection {
                 }
                 results.each{ id,result ->
                     def uid = docUid.secId(SECTION,id)
-                    tr(){
-                        td(){ content(ID:"result-${uid}"){result.name}  }
+                    tr{
+                        td{ content(ID:"result-${uid}", result.name)  }
                     }
                 }
             }
@@ -71,28 +74,24 @@ class ResultsSection {
                   codeSystemName: "SNOMED CT")
              statusCode(code:result.status )//dynamic
              component(){
-                 //RESULT OBSERVATION TEMPLATES
-                 result.observations.each { o ->
-                     generateObservation(uid, o)
-                 }
+                 //RESULT OBSERVATION TEMPLATES  -- each organizer could have multiple observations, but in our use we only will return one observation per organizer to simplify our data structure
+                     generateObservation(resultId, result)
+
              }
          }
       }
     }
 
-    def generateObservation(resultUid, obsResult = [:]){
+    def generateObservation(resultId, obsResult = [:]){
         builder.observation(classCode:"OBS", moodCode:"EVN"){
             templateId(root:"2.16.840.1.113883.10.20.22.4.2")
-            id(root:UUID.randomUUID())
-
+            id(docUid.resultObsId(resultId))
             code("xsi:type":"CE",
                     code:obsResult.code.code, //dynamic
                     displayName: obsResult.code.displayName, //dynamic
                     codeSystem: obsResult.code.codeSystem,   //dynamic
                     codeSystemName: obsResult.code.codeSystemName)    //dynamic
-            text(){
-                reference(value:"#result-${resultUid}")
-            }
+           // text(){ reference(value:"#result-${docUid.secId(SECTION,resultId)}") }
             statusCode(code:obsResult.status)
             effectiveTime(obsResult.effectiveTime)//dynamic
             value("xsi:type":"PQ",

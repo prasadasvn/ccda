@@ -52,9 +52,9 @@ class AllergiesSection {
               }
               allergies.each{ id,allergy ->
                   def uid = docUid.secId(SECTION,id)
-                  tr(){
+                  tr{
                       td(allergy.drugName)
-                      td(){ content(ID:"reaction-${uid}"){allergy.reactionName}  }
+                      td{ content(ID:"reaction-${uid}",allergy.reactionName ) }
                       td(allergy.statusCode)
                   }
               }
@@ -83,13 +83,13 @@ class AllergiesSection {
                         effectiveTime(low: allergy.effectiveTimeLow, high: allergy.effectiveTimeHigh) // if beginning is unknown (low), then null flavor UNK; if no longer a concern, may contain high //dyanmic
                         //VALUE - dyanmic, mapped from rcopia to either drug allergy or drug intolerance; mapped from Rcopia reactions to list of SNOMED values
                         value( ["xsi:type":"CD", code: allergy.reactionCode] + HL7_OID.SNOMED){
-                            originalText(){ reference(value:"reaction-${uid}")}  //using the approach defined in CDA Release 2, section 4.3.5.1
+                            //originalText(){ reference(value:"reaction-${uid}")}  //using the approach defined in CDA Release 2, section 4.3.5.1
                         }
                         participant(typeCode:"CSM"){
                             participantRole(classCode:"MANU"){
                                 playingEntity(classCode:"MMAT"){
                                     code([code: allergy.drugCode, displayName:allergy.drugName] + HL7_OID.RX_NORM ){
-                                        originalText(){ reference(value:"reaction-${uid}") }
+                                        //originalText(){ reference(value:"reaction-${uid}") }
                                     }
                                 }
                             }

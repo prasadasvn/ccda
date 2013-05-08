@@ -49,8 +49,8 @@ class ProceduresSection {
                 }
                 procedures.each{ id, procedure ->
                     def uid = docUid.secId(SECTION,id)
-                    tr(){
-                        td(){ content(ID:"procedure-${uid}"){procedure.name}  }
+                    tr{
+                        td{ content(ID:"procedure-${uid}",procedure.name)  }
                         td(procedure.date)
                     }
                 }
@@ -66,7 +66,7 @@ class ProceduresSection {
               templateId(HL7_OID.PROCEDURE_ACTIVITY_PROCEDURE_TEMPLATE_ID)
               id(root: uid)    //dynamic
               code([code: pro.code, displayName: pro.name ] + HL7_OID.SNOMED ){ //dynamic
-                   originalText(){ reference(value:"#procedure-${uid}")  }
+                   //originalText(){ reference(value:"#procedure-${uid}")  }
               }
               statusCode(code:"completed")//since this is a history, it would be completed, but could contain aborted,active,cancelled, or completed
               effectiveTime(value:pro.date)

@@ -6,6 +6,7 @@ import com.ids.ccda.oids.IDS_OID
 import com.ids.ccda.sections.AllergiesSection
 import com.ids.ccda.sections.ImmunizationsSection
 import com.ids.ccda.sections.MedicationsSection
+import com.ids.ccda.sections.PlanOfCareSection
 import com.ids.ccda.sections.ProblemsSection
 import com.ids.ccda.sections.ProceduresSection
 import com.ids.ccda.sections.ResultsSection
@@ -78,9 +79,8 @@ class CDABody {
         ]
 
         map.socialHistoryElements = [
-                "${id()}":[  name:  "Smoking",
-                  dates: [startDate:  "19560701", endDate:  "19880704"],
-                  snomed: [code:"8517006", displayName: "Former smoker"]
+                "${id()}":[  name:  "Smoking",startDate:  "19560701", endDate:  "19880704",
+                  elementCode:"8517006", elementDisplayName: "Former smoker"
                 ]
         ]
 
@@ -124,6 +124,28 @@ class CDABody {
                 "${id()}":[  code: "33", name: "Pneumococcal polysaccharide", date: "20120806"]
         ]
 
+        map.plans = [
+                encounters: [
+                  "${id()}": [ visitCode: "99213", visitName: "Established Patient", date: (new Date() + 21).format("yyyyMMdd"),
+                  instructions:"Follow up with Dr. Seven" ],
+                  "${id()}": [ visitCode: "99241", visitName: "Established Patient", date: (new Date() + 14).format("yyyyMMdd"),
+                  instructions:"Follow up with Dr. Puffer for a pulmonology consultation" ]
+                ],
+                observations: [
+                  "${id()}": [ codeWithSystem: [ code: "6460-0", displayName: "Sputum Culture"] + HL7_OID.LOINC, date:"20120806"],
+                  "${id()}": [ codeWithSystem: [ code: "168731009", displayName: "Chest X-Ray"] + HL7_OID.SNOMED, date:"20120813"],
+                  "${id()}": [ codeWithSystem: [ code: "30313-1", displayName: "Chest HGB"] + HL7_OID.LOINC, date:"20120813"]
+                ],
+                procedures: [
+                  "${id()}":[codeWithSystem: [ code: "45378", displayName: "Colonoscopy"] + HL7_OID.CPT, date: "20120922"]
+                ],
+                instructions: [
+                  "${id()}": [ instructions: "Smoking cessation (SNOMED CT: 225423000)", goal:true],
+                  "${id()}": [ instructions: "Patient may continue to experience low grade fever and chills.", goal:false],
+                  "${id()}": [ instructions: "Return to clinic or call 911 if you experience chest pain, shortness of breath, high fevers, or intractable vomitting/diarrhea", goal:false]
+                ]
+        ]
+
         def writer = new StringWriter()
         def builder = new MarkupBuilder(writer)
         new CDABody(builder, map)
@@ -148,6 +170,7 @@ class CDABody {
               new ResultsSection(builder,map).builder
               new VitalSignsSection(builder,map).builder
               new ImmunizationsSection(builder,map).builder
+              new PlanOfCareSection(builder,map).builder
 
             }
         }

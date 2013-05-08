@@ -69,13 +69,13 @@ class VitalSignsSection {
                 }
                 vitalSigns.each{ id, vitalSign ->
                     def uid = docUid.secId(SECTION,id)
-                    tr(){
-                        td(){ content(ID:"vitalSign-${uid}"){vitalSign.date} }
-                        td(){ content(ID:"vitalSign-${uid}"){vitalSign.height} }
-                        td(){ content(ID:"vitalSign-${uid}"){vitalSign.weight} }
-                        td(){ content(ID:"vitalSign-${uid}"){vitalSign.systolic} }
-                        td(){ content(ID:"vitalSign-${uid}"){vitalSign.diastolic} }
-                        td(){ content(ID:"vitalSign-${uid}"){vitalSign.bmi} }
+                    tr{
+                        td{ content(ID:"vitalSign-${uid}",vitalSign.date) }
+                        td{ content(ID:"vitalSign-${uid}",vitalSign.height) }
+                        td{ content(ID:"vitalSign-${uid}",vitalSign.weight) }
+                        td{ content(ID:"vitalSign-${uid}",vitalSign.systolic) }
+                        td{ content(ID:"vitalSign-${uid}",vitalSign.diastolic) }
+                        td{ content(ID:"vitalSign-${uid}",vitalSign.bmi) }
                     }
                 }
             }
@@ -109,7 +109,7 @@ class VitalSignsSection {
             templateId(HL7_OID.VITAL_SIGN_OBSERVATION_TEMPLATE_ID)
             id(root:uid)
             code( vitalSignType )
-            text(){ reference(value:"#vitalSign-${uid}")  }
+            //text(){ reference(value:"#vitalSign-${uid}")  }
             statusCode(code:"completed")
             effectiveTime(value:vitalSign.date)
             value( "xsi:type":"PQ",

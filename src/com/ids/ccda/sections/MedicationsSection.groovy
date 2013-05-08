@@ -30,8 +30,8 @@ class MedicationsSection {
               code(SECTION_CODE)
               title(TITLE)
               generateNormativeText()
-              medications.each { medication ->
-                generateEntry(medication)
+              medications.each { id, medication ->
+                generateEntry(id, medication)
               }
 
           }
@@ -53,7 +53,7 @@ class MedicationsSection {
                 medications.each{ id, medication ->
                     def uid = docUid.secId(SECTION,id)
                     tr(){
-                        td(){content(ID:"medication-${uid}"){medication.name} }
+                        td{content(ID:"medication-${uid}",medication.name) }
                         td(medication.code)
                         td(medication.startDate)
                         td(medication.stopDate)
@@ -71,7 +71,7 @@ class MedicationsSection {
           substanceAdministration(classCode:"SBADM", moodCode:"EVN"){
               templateId(HL7_OID.MEDICATIONS_ACTIVITY_TEMPLATE_ID)
               id(root: uid) //dynamic
-              text(){ reference(value:"medication-${uid}"){ medication.name} }//dynamic
+              //text(){ reference(value:"medication-${uid}"){ medication.name} }//dynamic
               statusCode(code:"completed") //status is in actuality communicated by the effectiveTime
               effectiveTime("xsi:type":"IVL_TS"){
                   low(value: medication.startDate) //example shows YYYYMMDD //dynamic
@@ -95,7 +95,7 @@ class MedicationsSection {
                       id(root: docUid.medInfoId(medicationId) )
                       manufacturedMaterial(){
                           code([code:medication.code,  displayName: medication.name] + HL7_OID.RX_NORM){ //dynamic
-                              originalText(){ reference(value:"medication-${uid}") }//dynamic
+                              //originalText(){ reference(value:"medication-${uid}") }//dynamic
                           }
                       }
                   }
@@ -106,7 +106,7 @@ class MedicationsSection {
                       templateId(HL7_OID.INSTRUCTIONS_TEMPLATE_ID)
                       code(["xsi:type":"CE", code: "409073007", displayName: "Education"] + HL7_OID.SNOMED)
                       text(){
-                          reference(value:"instructions-${uid}")
+                          //reference(value:"instructions-${uid}")
                           medication.instructions
                       }
                       statusCode(code:"completed")

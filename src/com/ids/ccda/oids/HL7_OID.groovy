@@ -14,6 +14,8 @@ class HL7_OID {
     public static final NPI = "2.16.840.1.113883.4.6"
     public static final LOINC =[ codeSystem:"2.16.840.1.113883.6.1",   codeSystemName: "LOINC"]
     public static final RX_NORM = [codeSystem: "2.16.840.1.113883.6.88", codeSystemName:"RxNorm"]
+    public static final CPT = [codeSystem: "2.16.840.1.113883.6.12", codeSystemName:"CPT"]
+
     public static final CVX = [ codeSystem: "2.16.840.1.113883.6.59", codeSystemName: "CVX"]
     public static final ACT_CLASS = [codeSystem: "2.16.840.1.113883.5.6", codeSystemName:"HL7ActClass"]
     public static final ACT_CODE= [codeSystem: "2.16.840.1.113883.5.4", codeSystemName:"ActCode"]
@@ -61,5 +63,10 @@ class HL7_OID {
     public static final VITAL_SIGNS_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.2.4.1"]
     public static final VITAL_SIGNS_ORGANIZER_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.26"]
     public static final VITAL_SIGN_OBSERVATION_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.27"]
+
+    public static final PLAN_OF_CARE_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.2.10"]
+    public static final PLAN_OF_CARE_ACTIVITY_ENCOUNTER_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.40" ]
+    public static final PLAN_OF_CARE_ACTIVITY_OBSERVATION_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.44" ]
+    public static final PLAN_OF_CARE_ACTIVITY_PROCEDURE_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.41"]
 
 }

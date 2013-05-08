@@ -14,7 +14,7 @@ class SocialHistorySection {
     DocUid docUid
     def socialHistoryElements = [:]
     MarkupBuilder builder
-    def ATTRS = [ "type", "dates"/*startDate,endDate*/,  "snomed" /*code,displayName */ ]
+    def ATTRS = [ "name", "startDate","endDate",  "elementCode", "elementDisplayName"]
 
 
     SocialHistorySection(builder, map =[:]) {
@@ -52,11 +52,11 @@ class SocialHistorySection {
                 }
                 socialHistoryElements.each{ id, socialHistoryElement ->
                     def uid = docUid.secId(SECTION,id)
-                    tr(){
-                        td(){ content(ID:"socialHistoryElement-${uid}"){socialHistoryElement.type} }//dynamic
-                        td(socialHistoryElement.snomed.displayName) //dynamic
-                        td(socialHistoryElement.dates.startDate)  //dynamic
-                        td(socialHistoryElement.dates.endDate)  //dynamic
+                    tr{
+                        td{ content(ID:"socialHistoryElement-${uid}", socialHistoryElement.name) }//dynamic
+                        td(socialHistoryElement.elementDisplayName) //dynamic
+                        td(socialHistoryElement.startDate)  //dynamic
+                        td(socialHistoryElement.endDate)  //dynamic
                     }
                 }
             }
@@ -74,8 +74,8 @@ class SocialHistorySection {
             statusCode(code:"completed")
             generateEffectiveTime( socialHistoryElement.dates) //dynamic
             value(["xsi:type":"CD",
-                   code:socialHistoryElement.snomed.code,
-                   displayName: socialHistoryElement.snomed.displayName ] + HL7_OID.SNOMED
+                   code:socialHistoryElement.elementCode,
+                   displayName: socialHistoryElement.elementDisplayName ] + HL7_OID.SNOMED
             )
         }
       }

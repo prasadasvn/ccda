@@ -51,7 +51,7 @@ class ImmunizationsSection {
                 immunizations.each{ id,immunization ->
                     def uid = docUid.secId(SECTION,id)
                     tr(){
-                        td(){ content(ID:"immunization-${uid}"){immunization.name} }
+                        td{ content(ID:"immunization-${uid}",immunization.name) }
                         td(immunization.date)
                         td("Completed")
                     }
@@ -67,7 +67,7 @@ class ImmunizationsSection {
           substanceAdministration(classCode:"SBADM", moodCode:"EVN", negationInd:"false"){
             templateId(HL7_OID.IMMUNIZATION_ACTIVITY_TEMPLATE_ID)
             id(root:uid)
-            text(){ reference(value:"#$immunization-${uid}") }
+            //text(){ reference(value:"#$immunization-${uid}") }
             status(code:"completed")
             effectiveTime("xsi:type":"IVL_TS", value:immunization.date)
             //Immunization Medication Information
@@ -76,7 +76,7 @@ class ImmunizationsSection {
                     templateId(HL7_OID.IMMUNIZATION_MEDICATION_INFORMATION_TEMPLATE_ID)
                     manufacturedMaterial(){
                         code( immunizationCode([code:immunization.code, displayName: immunization.name] ) )
-                        originalText(immunization.name)
+                        //originalText(immunization.name)
                     }
                 }
             }
