@@ -17,6 +17,7 @@ class HL7_OID {
     public static final CPT = [codeSystem: "2.16.840.1.113883.6.12", codeSystemName:"CPT"]
 
     public static final CVX = [ codeSystem: "2.16.840.1.113883.6.59", codeSystemName: "CVX"]
+    public static final NCI_THESAURUS = [codeSystem:"2.16.840.1.113883.3.88.12.3221.8.7", codeSystemName:"NCI Thesaurus"]
     public static final ACT_CLASS = [codeSystem: "2.16.840.1.113883.5.6", codeSystemName:"HL7ActClass"]
     public static final ACT_CODE= [codeSystem: "2.16.840.1.113883.5.4", codeSystemName:"ActCode"]
 
@@ -45,7 +46,10 @@ class HL7_OID {
     public static final MEDICATIONS_ACTIVITY_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.16"]
     public static final MEDICATION_INFORMATION_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.23"]
 
-    public static final INSTRUCTIONS_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.20"]
+    public static final MEDICATIONS_ADMINISTERED_SECTION_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.2.1.1"]
+
+
+    public static final INSTRUCTIONS_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.2.38"]
 
     public static final PROBLEMS_SECTION_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.2.5.1"]
     public static final PROBLEM_CONCERN_ACT_TEMPLATE_ID = [root:"2.16.840.1.113883.10.20.22.4.3"]

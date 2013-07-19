@@ -4,41 +4,113 @@
     <list default="true" id="95594206-fa17-4356-93c1-7b9067ccaa3b" name="Default" comment="" />
     <ignored path="CCDA.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/GeneralHeaderTemplate.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367336845206" ignored="false" />
+    <file path="/GeneralHeaderTemplate.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371653636094" ignored="false" />
     <file path="/OIDS.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1366653685370" ignored="false" />
-    <file path="/a.dummy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367937454263" ignored="false" />
-    <file path="/Dummy.txt" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1366653823770" ignored="false" />
+    <file path="/a.dummy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1372181599339" ignored="false" />
+    <file path="/Dummy.txt" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1372181021860" ignored="false" />
     <file path="$PROJECT_DIR$/../PDFtoTiff/src/com/ids/pdftotiff/PdfToTiff.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1363101584854" ignored="false" />
     <file path="/PdfToTiff.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1363033554903" ignored="false" />
     <file path="$PROJECT_DIR$/../SledgeHammer/src/gwt/com/ids/emr/client/common/shared/enums/MaritalStatus.java" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1363205082358" ignored="false" />
     <file path="/MaritalStatus.java" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1363205082358" ignored="false" />
     <file path="/CCDA.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1366749595257" ignored="false" />
     <file path="/CCDBody.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1363362707084" ignored="false" />
-    <file path="/MedicationsSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367855185502" ignored="false" />
-    <file path="/CDABody.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1368024093194" ignored="false" />
-    <file path="/AllergiesSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367853287672" ignored="false" />
+    <file path="/MedicationsSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1368125550002" ignored="false" />
+    <file path="/CDABody.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1368111758794" ignored="false" />
+    <file path="/AllergiesSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1368125479391" ignored="false" />
     <file path="$PROJECT_DIR$/../SledgeHammer/grails-app/services/com/ids/emr/server/erx/RcopiaErxService.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1363726790507" ignored="false" />
     <file path="$PROJECT_DIR$/../SledgeHammer/grails-app/controllers/com/ids/emr/encounter/EncounterController.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1363726801491" ignored="false" />
-    <file path="/fragment.java" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1368031845618" ignored="false" />
-    <file path="/ProblemsSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367855258593" ignored="false" />
+    <file path="/fragment.java" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371743035692" ignored="false" />
+    <file path="/ProblemsSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1368114990554" ignored="false" />
     <file path="/EmrErxDomains" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1364320899148" ignored="false" />
-    <file path="/ProceduresSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367854322971" ignored="false" />
-    <file path="/SocialHistorySection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1368025168758" ignored="false" />
-    <file path="/ResultsSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1368026657004" ignored="false" />
+    <file path="/ProceduresSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1368125908239" ignored="false" />
+    <file path="/SocialHistorySection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1368481621530" ignored="false" />
+    <file path="/ResultsSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1368481601863" ignored="false" />
     <file path="/result_status.txt" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1365092652656" ignored="false" />
-    <file path="/VitalSignsSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367854271102" ignored="false" />
-    <file path="/ImmunizationsSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367853317401" ignored="false" />
-    <file path="/HL7_OID.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367936636310" ignored="false" />
-    <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/relaxng.rng" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367288828539" ignored="false" />
-    <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/catalog.xsd" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367288828539" ignored="false" />
-    <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/xml.xsd" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367288828539" ignored="false" />
-    <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/xslt-2_0.xsd" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367288828539" ignored="false" />
-    <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/xslt-1_0.xsd" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367288828539" ignored="false" />
-    <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/xinclude.xsd" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367288828539" ignored="false" />
-    <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/XMLSchema.xsd" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367288828539" ignored="false" />
+    <file path="/VitalSignsSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1368115357161" ignored="false" />
+    <file path="/ImmunizationsSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1368114602105" ignored="false" />
+    <file path="/HL7_OID.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1368033165563" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/relaxng.rng" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371215321577" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/catalog.xsd" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371215321577" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/xml.xsd" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371215321577" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/xslt-2_0.xsd" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371215321577" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/xslt-1_0.xsd" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371215321577" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/xinclude.xsd" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371215321577" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/XMLSchema.xsd" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371215321577" ignored="false" />
     <file path="/IDS_OID.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1367595029847" ignored="false" />
-    <file path="/DocUid.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1368026257806" ignored="false" />
-    <file path="/PlanOfCareSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1368020902293" ignored="false" />
+    <file path="/DocUid.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1368033102885" ignored="false" />
+    <file path="/PlanOfCareSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1368477288708" ignored="false" />
+    <file path="/MedicationsAdministeredSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1368114659700" ignored="false" />
+    <file path="/Mapable.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1368125509298" ignored="false" />
+    <file path="/TestCDA.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371231509519" ignored="false" />
+    <file path="/BodySection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1368480040556" ignored="false" />
+    <file path="/HeaderSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1368480083242" ignored="false" />
+    <file path="/AuthorTemplate.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371492329973" ignored="false" />
+    <file path="/RecordTargetTemplate.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371675626370" ignored="false" />
+    <file path="/CustodianTemplate.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371225347998" ignored="false" />
+    <file path="/ParticipantsTemplate.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371225462591" ignored="false" />
+    <file path="/ServiceEventTemplate.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371502969521" ignored="false" />
+    <file path="$PROJECT_DIR$/../SledgeHammer/grails-app/controllers/com/ids/emr/EMRUserRoleController.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1369408686756" ignored="false" />
+    <file path="$PROJECT_DIR$/../SledgeHammer/grails-app/controllers/com/ids/emr/export/ExportController.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1369408686756" ignored="false" />
+    <file path="$PROJECT_DIR$/../SledgeHammer/grails-app/controllers/com/ids/emr/PracticeController.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1369408686756" ignored="false" />
+    <file path="$PROJECT_DIR$/../SledgeHammer/grails-app/controllers/com/ids/emr/FaxController.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1369408686756" ignored="false" />
+    <file path="$PROJECT_DIR$/../SledgeHammer/grails-app/controllers/com/ids/emr/ErxDiagnosticController.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1369408686756" ignored="false" />
+    <file path="$PROJECT_DIR$/../SledgeHammer/grails-app/controllers/com/ids/emr/PatientController.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1369408686756" ignored="false" />
+    <file path="$PROJECT_DIR$/../SledgeHammer/grails-app/controllers/com/ids/emr/GwtPayloadHolder.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1369408686756" ignored="false" />
+    <file path="$PROJECT_DIR$/../SledgeHammer/grails-app/controllers/com/ids/emr/UncaughtJavascriptController.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1369408686756" ignored="false" />
+    <file path="$PROJECT_DIR$/../SledgeHammer/grails-app/controllers/com/ids/emr/ClinicSiteController.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1369408686756" ignored="false" />
+    <file path="$PROJECT_DIR$/../SledgeHammer/grails-app/controllers/com/ids/emr/EmrGwtController.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1369408686756" ignored="false" />
+    <file path="$PROJECT_DIR$/../SledgeHammer/grails-app/controllers/com/ids/emr/EmrUserController.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1369408686756" ignored="false" />
+    <file path="$PROJECT_DIR$/../SledgeHammer/grails-app/controllers/com/ids/emr/PageClickCountController.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1369408686756" ignored="false" />
+    <file path="$PROJECT_DIR$/../SledgeHammer/grails-app/controllers/com/ids/emr/ExternalProviderController.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1369408686756" ignored="false" />
+    <file path="$PROJECT_DIR$/../SledgeHammer/grails-app/controllers/com/ids/emr/PatientPortalController.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1369408686756" ignored="false" />
+    <file path="$PROJECT_DIR$/../SledgeHammer/grails-app/controllers/com/ids/emr/LocationController.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1369408686756" ignored="false" />
+    <file path="$PROJECT_DIR$/../SledgeHammer/inplace-plugins/gwt-0.5/grails-app/controllers/org/codehaus/groovy/grails/plugins/gwt/GwtController.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1369408686756" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/html5/xhtml5.xsd" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371215321577" ignored="false" />
+    <file path="/AuthorTemplateTests.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371492390210" ignored="false" />
+    <file path="/AllergiesSectionTemplate.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371663540239" ignored="false" />
+    <file path="/Document.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371227668998" ignored="false" />
+    <file path="/ClinicalSummary.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371221834775" ignored="false" />
+    <file path="/AllergiesSectionTemplateTests.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371243801961" ignored="false" />
+    <file path="/ImmunizationsSectionTemplateTests.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371663680698" ignored="false" />
+    <file path="/MedicationsAdministeredSectionTemplateTests.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371245868259" ignored="false" />
+    <file path="/MedicationsSectionTemplateTests.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371245976084" ignored="false" />
+    <file path="/PlanOfCareSectionTemplateTests.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371246108185" ignored="false" />
+    <file path="/ProblemsSectionTemplateTests.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371246238850" ignored="false" />
+    <file path="/ProceduresSectionTemplateTests.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371246896094" ignored="false" />
+    <file path="/ResultsSectionTemplateTests.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371247024423" ignored="false" />
+    <file path="/SocialHistorySectionTemplateTests.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371479426479" ignored="false" />
+    <file path="/SocialHistorySectionTemplate.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371479319524" ignored="false" />
+    <file path="/VitalSignsSectionTemplateTests.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371485499057" ignored="false" />
+    <file path="/VitalSignsSectionTemplate.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371669568886" ignored="false" />
+    <file path="/CustodianTemplateTests.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371493363435" ignored="false" />
+    <file path="/ParticipantsTemplateTests.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371493621490" ignored="false" />
+    <file path="/RecordTargetTemplateTests.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371493815617" ignored="false" />
+    <file path="/ServiceEventTemplateTests.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371503017160" ignored="false" />
+    <file path="/CCD.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371656013511" ignored="false" />
+    <file path="/CCDTests.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371653285014" ignored="false" />
+    <file path="/Comment.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371663468023" ignored="false" />
+    <file path="/ImmunizationsSectionTemplate.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371663718696" ignored="false" />
+    <file path="/MedicationsAdministeredSectionTemplate.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371663771498" ignored="false" />
+    <file path="/MedicationsSectionTemplate.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371665192407" ignored="false" />
+    <file path="/PlanOfCareSectionTemplate.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371667840374" ignored="false" />
+    <file path="/ProblemsSectionTemplate.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371667860403" ignored="false" />
+    <file path="/ProceduresSectionTemplate.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371667911012" ignored="false" />
+    <file path="/ResultsSectionTemplate.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371667962420" ignored="false" />
+    <file path="/IDSBuilderSupport.java" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371745150513" ignored="false" />
+    <file path="/IDSMarkupBuilder.java" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371739628881" ignored="false" />
+    <file path="/IDSMarkupBuilderHelper.java" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371739615584" ignored="false" />
+    <file path="/IDSMarkupBuilderTests.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371740237279" ignored="false" />
+    <file path="/CDAMarkupBuilder.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1373052775952" ignored="false" />
+    <file path="/CDAMarkupBuilderTests.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1373403534821" ignored="false" />
+    <file path="$PROJECT_DIR$/../DataExtractor/src/com/ids/DatabaseInfo.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1372181025110" ignored="false" />
+    <file path="$PROJECT_DIR$/../DataExtractor/src/com/ids/FileProcesser.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1372181025110" ignored="false" />
+    <file path="$PROJECT_DIR$/../DataExtractor/src/com/ids/RecordElement.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1372181025110" ignored="false" />
+    <file path="$PROJECT_DIR$/../DataExtractor/Build.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1372181025110" ignored="false" />
+    <file path="$PROJECT_DIR$/../DataExtractor/src/com/ids/Processor.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1372181025110" ignored="false" />
+    <file path="$PROJECT_DIR$/../DataExtractor/atlassian-ide-plugin.xml" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1372181025110" ignored="false" />
+    <file path="$PROJECT_DIR$/../DataExtractor/src/com/ids/Backup.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1372181025110" ignored="false" />
+    <file path="$PROJECT_DIR$/../DataExtractor/src/com/ids/DbProcessor.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1372181025110" ignored="false" />
+    <file path="$PROJECT_DIR$/../DataExtractor/src/com/ids/local/LocalStorage.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1372181025110" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +127,38 @@
     </disable_hints>
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/ids/ccda/templates/sections/body/AllergiesSectionTemplate.groovy" line="21" class="com.ids.ccda.templates.sections.body.AllergiesSectionTemplate" package="com.ids.ccda.templates.sections.body">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/ids/ccda/util/IDSBuilderSupport.java" line="95" class="com.ids.ccda.util.IDSBuilderSupport" package="com.ids.ccda.util">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -92,6 +195,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -100,13 +204,13 @@
     <favorites_list name="CCDA" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.39507693">
       <split-first>
         <leaf>
-          <file leaf-file-name="CCDBody.groovy" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/documents/ccd/CCDBody.groovy">
+          <file leaf-file-name="CDAMarkupBuilderTests.groovy" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/tests/unit/com/ids/ccda/util/CDAMarkupBuilderTests.groovy">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="26" column="16" selection-start="403" selection-end="403" vertical-scroll-proportion="0.7330827">
+                <state line="96" column="60" selection-start="3307" selection-end="3307" vertical-scroll-proportion="0.47791165">
                   <folding />
                 </state>
               </provider>
@@ -116,28 +220,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="Greenway_example_CCDA.xml" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Greenway_example_CCDA.xml">
+          <file leaf-file-name="CDAMarkupBuilder.groovy" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/util/CDAMarkupBuilder.groovy">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="553" column="67" selection-start="36053" selection-end="36053" vertical-scroll-proportion="0.028901733">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="NIST_CCDA.xml" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/NIST_CCDA.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="1876" column="41" selection-start="97246" selection-end="97253" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CCDA_CCD_b1_Ambulatory_v2.xml" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/CCDA_CCD_b1_Ambulatory_v2.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="2493" column="31" selection-start="111124" selection-end="111131" vertical-scroll-proportion="0.0">
+                <state line="57" column="47" selection-start="1782" selection-end="1782" vertical-scroll-proportion="0.6447368">
                   <folding />
                 </state>
               </provider>
@@ -158,22 +244,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/CCDA_CCD_b1_Ambulatory_v2.xml" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/GeneralHeaderTemplate.groovy" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/CCDA.groovy" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/oids/IDS_OID.groovy" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/oids/HL7_OID.groovy" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/CDABody.groovy" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/sections/SocialHistorySection.groovy" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/documents/ccd/uid/DocUid.groovy" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/sections/AllergiesSection.groovy" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/sections/ImmunizationsSection.groovy" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/sections/MedicationsSection.groovy" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/sections/PlanOfCareSection.groovy" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/sections/ProblemsSection.groovy" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/sections/ProceduresSection.groovy" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/sections/ResultsSection.groovy" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/sections/VitalSignsSection.groovy" />
+        <option value="$PROJECT_DIR$/src/com/ids/ccda/templates/sections/body/MedicationsAdministeredSectionTemplate.groovy" />
+        <option value="$PROJECT_DIR$/src/com/ids/ccda/templates/sections/body/MedicationsSectionTemplate.groovy" />
+        <option value="$PROJECT_DIR$/src/com/ids/ccda/templates/sections/body/PlanOfCareSectionTemplate.groovy" />
+        <option value="$PROJECT_DIR$/src/com/ids/ccda/templates/sections/body/ProblemsSectionTemplate.groovy" />
+        <option value="$PROJECT_DIR$/src/com/ids/ccda/templates/sections/body/ProceduresSectionTemplate.groovy" />
+        <option value="$PROJECT_DIR$/src/com/ids/ccda/templates/sections/body/ResultsSectionTemplate.groovy" />
+        <option value="$PROJECT_DIR$/src/com/ids/ccda/templates/sections/body/SocialHistorySectionTemplate.groovy" />
+        <option value="$PROJECT_DIR$/src/com/ids/ccda/templates/sections/body/VitalSignsSectionTemplate.groovy" />
+        <option value="$PROJECT_DIR$/src/com/ids/ccda/templates/header/RecordTargetTemplate.groovy" />
+        <option value="$PROJECT_DIR$/src/com/ids/ccda/util/IDSMarkupBuilderHelper.java" />
+        <option value="$PROJECT_DIR$/src/com/ids/ccda/util/IDSMarkupBuilder.java" />
+        <option value="$PROJECT_DIR$/tests/unit/com/ids/ccda/util/IDSMarkupBuilderTests.groovy" />
+        <option value="$PROJECT_DIR$/src/com/ids/ccda/util/IDSBuilderSupport.java" />
+        <option value="$USER_HOME$/customers/spectrum/compulink_integrity_appointment_reason_mapping.csv" />
+        <option value="$PROJECT_DIR$/src/com/ids/ccda/util/CDAMarkupBuilder.groovy" />
+        <option value="$PROJECT_DIR$/tests/unit/com/ids/ccda/util/CDAMarkupBuilderTests.groovy" />
       </list>
     </option>
   </component>
@@ -225,7 +311,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -254,6 +339,60 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CCDA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CCDA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ccda" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CCDA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CCDA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ccda" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CCDA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CCDA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -280,7 +419,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sections" />
+              <option name="myItemId" value="util" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -302,7 +441,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="oids" />
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -324,146 +463,174 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ccd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CCDA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CCDA" />
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ccda" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ccd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uid" />
+              <option name="myItemId" value="body" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="editor.preferences.completion" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="options.lastSelected" value="fileTemplates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DataExtractor" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.ids.ccda.sections" />
+      <recent name="unit.com.ids.ccda.util" />
+      <recent name="unit.com.ids.ccda.templates" />
+      <recent name="unit.com.ids.ccda.templates.sections.body" />
+      <recent name="com.ids.ccda" />
+      <recent name="com.ids.ccda.templates.header" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib" />
     </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="com.ids.ccda.oids.HL7_OID" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$USER_HOME$/" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$USER_HOME$/" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.ids.ccda" />
+      <recent name="com.ids.ccda.templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CDABody">
-    <configuration default="false" name="GeneralHeaderTemplate" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.ids.ccda.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.ids.ccda.GeneralHeaderTemplate" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="CCDA" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="CCDA" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.ids.ccda.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.ids.ccda.CCDA" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="CCDA" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="CDABody" type="Application" factoryName="Application" temporary="true">
+  <component name="RunManager" selected="JUnit.CDAMarkupBuilderTests.testArgsHandler">
+    <configuration default="false" name="CDAMarkupBuilderTests.testReturnNullFlavor" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="com.ids.ccda.CDABody" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <module name="CCDA" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="PACKAGE_NAME" value="unit.com.ids.ccda.util" />
+      <option name="MAIN_CLASS_NAME" value="unit.com.ids.ccda.util.CDAMarkupBuilderTests" />
+      <option name="METHOD_NAME" value="testReturnNullFlavor" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="CCDA" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
       <envs />
+      <patterns />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="DocUid" type="Application" factoryName="Application" temporary="true">
+    <configuration default="false" name="CDAMarkupBuilderTests.testReturnSpecifiedNullFlavor" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="com.ids.ccda.documents.ccd.uid.DocUid" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <module name="CCDA" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="PACKAGE_NAME" value="unit.com.ids.ccda.util" />
+      <option name="MAIN_CLASS_NAME" value="unit.com.ids.ccda.util.CDAMarkupBuilderTests" />
+      <option name="METHOD_NAME" value="testReturnSpecifiedNullFlavor" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="CCDA" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
       <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CDAMarkupBuilderTests.testLinkedHashMapHandlerReturnsNullFlavorForNnullCheck" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="CCDA" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="unit.com.ids.ccda.util" />
+      <option name="MAIN_CLASS_NAME" value="unit.com.ids.ccda.util.CDAMarkupBuilderTests" />
+      <option name="METHOD_NAME" value="testLinkedHashMapHandlerReturnsNullFlavorForNnullCheck" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CDAMarkupBuilderTests" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="CCDA" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="unit.com.ids.ccda.util" />
+      <option name="MAIN_CLASS_NAME" value="unit.com.ids.ccda.util.CDAMarkupBuilderTests" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CDAMarkupBuilderTests.testArgsHandler" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="CCDA" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="unit.com.ids.ccda.util" />
+      <option name="MAIN_CLASS_NAME" value="unit.com.ids.ccda.util.CDAMarkupBuilderTests" />
+      <option name="METHOD_NAME" value="testArgsHandler" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
@@ -534,18 +701,20 @@
       <patterns />
       <method />
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Application.GeneralHeaderTemplate" />
-      <item index="1" class="java.lang.String" itemvalue="Application.CCDA" />
-      <item index="2" class="java.lang.String" itemvalue="Application.CDABody" />
-      <item index="3" class="java.lang.String" itemvalue="Application.DocUid" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.CDAMarkupBuilderTests.testReturnNullFlavor" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.CDAMarkupBuilderTests.testReturnSpecifiedNullFlavor" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.CDAMarkupBuilderTests.testLinkedHashMapHandlerReturnsNullFlavorForNnullCheck" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.CDAMarkupBuilderTests" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.CDAMarkupBuilderTests.testArgsHandler" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.CDABody" />
-        <item index="1" class="java.lang.String" itemvalue="Application.GeneralHeaderTemplate" />
-        <item index="2" class="java.lang.String" itemvalue="Application.DocUid" />
-        <item index="3" class="java.lang.String" itemvalue="Application.CCDA" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.CDAMarkupBuilderTests.testArgsHandler" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.CDAMarkupBuilderTests" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CDAMarkupBuilderTests.testLinkedHashMapHandlerReturnsNullFlavorForNnullCheck" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.CDAMarkupBuilderTests.testReturnSpecifiedNullFlavor" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.CDAMarkupBuilderTests.testReturnNullFlavor" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -564,26 +733,26 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1919" y="-4" width="1922" height="1085" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32870865" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1514649" sideWeight="0.32692307" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20490928" sideWeight="0.59551764" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1514649" sideWeight="0.32692307" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.06296691" sideWeight="0.8370607" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1514649" sideWeight="0.33760685" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4044824" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1514649" sideWeight="0.33760685" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1629393" sideWeight="0.28768635" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952183" sideWeight="0.71231365" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32870865" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20170757" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32870865" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -623,7 +792,7 @@
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
-    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
     <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
     <option name="LIMIT_HISTORY" value="true" />
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
@@ -656,128 +825,102 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/oids/HL7_OID.groovy">
+    <entry file="file://$PROJECT_DIR$/tests/unit/com/ids/ccda/templates/CCDTests.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="39" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
+        <state line="18" column="65" selection-start="497" selection-end="497" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/Document.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="49" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/CDABody.groovy">
+    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/templates/header/RecordTargetTemplate.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="91" selection-start="4316" selection-end="4316" vertical-scroll-proportion="0.0">
+        <state line="22" column="18" selection-start="1328" selection-end="1328" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/documents/ccd/CCD.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="51" selection-start="1946" selection-end="1946" vertical-scroll-proportion="0.030549899" />
+      </provider>
+    </entry>
+    <entry file="jar://$GRAILS_ROOT$/lib/groovy-all-1.7.8.jar!/org/codehaus/groovy/runtime/InvokerHelper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="170" selection-end="170" vertical-scroll-proportion="0.15400411" />
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/apps/java/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="17" selection-start="5193" selection-end="5193" vertical-scroll-proportion="-0.59450173" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/templates/sections/body/AllergiesSectionTemplate.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="6" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/documents/ccd/uid/DocUid.groovy">
+    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/util/IDSBuilderSupport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="43" selection-start="928" selection-end="928" vertical-scroll-proportion="0.0">
+        <state line="93" column="0" selection-start="3211" selection-end="3230" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/sections/AllergiesSection.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="41" selection-start="4232" selection-end="4232" vertical-scroll-proportion="0.74418604">
-          <folding>
-            <element signature="e#31#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/sections/ImmunizationsSection.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="31" selection-start="2217" selection-end="2226" vertical-scroll-proportion="0.75147927">
-          <folding>
-            <element signature="e#31#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/sections/MedicationsSection.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="103" selection-start="4125" selection-end="4125" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/sections/PlanOfCareSection.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="164" column="22" selection-start="6659" selection-end="6659" vertical-scroll-proportion="0.5206767">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/sections/ProblemsSection.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="34" selection-start="3603" selection-end="3603" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#31#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/sections/ProceduresSection.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="21" selection-start="2158" selection-end="2158" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#31#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/sections/ResultsSection.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="13" selection-start="3500" selection-end="3500" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#31#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/sections/SocialHistorySection.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="61" selection-start="2879" selection-end="2879" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#31#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/sections/VitalSignsSection.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="117" selection-start="3997" selection-end="3997" vertical-scroll-proportion="0.2669173">
-          <folding>
-            <element signature="e#31#75#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NIST_CCDA.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1876" column="41" selection-start="97246" selection-end="97253" vertical-scroll-proportion="0.0">
+        <state line="672" column="53" selection-start="26055" selection-end="26059" vertical-scroll-proportion="0.02173913">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CCDA_CCD_b1_Ambulatory_v2.xml">
+    <entry file="file://$PROJECT_DIR$/tests/TestCDA.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2493" column="31" selection-start="111124" selection-end="111131" vertical-scroll-proportion="0.0">
+        <state line="22" column="49" selection-start="701" selection-end="701" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Greenway_example_CCDA.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/util/IDSMarkupBuilderHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="553" column="67" selection-start="36053" selection-end="36053" vertical-scroll-proportion="0.028901733">
+        <state line="30" column="15" selection-start="855" selection-end="855" vertical-scroll-proportion="0.02631579">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/documents/ccd/CCDBody.groovy">
+    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/util/IDSMarkupBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="16" selection-start="403" selection-end="403" vertical-scroll-proportion="0.7330827">
+        <state line="28" column="0" selection-start="884" selection-end="884" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/unit/com/ids/ccda/util/IDSMarkupBuilderTests.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="63" selection-start="405" selection-end="405" vertical-scroll-proportion="0.264">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/customers/spectrum/compulink_integrity_appointment_reason_mapping.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="54" selection-start="0" selection-end="1600" vertical-scroll-proportion="0.7996661" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/util/CDAMarkupBuilder.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="47" selection-start="1782" selection-end="1782" vertical-scroll-proportion="0.6447368">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/unit/com/ids/ccda/util/CDAMarkupBuilderTests.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="60" selection-start="3307" selection-end="3307" vertical-scroll-proportion="0.47791165">
           <folding />
         </state>
       </provider>
@@ -811,7 +954,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>grails-1.3.7</last-edited>
+          <last-edited>groovy-1.7.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -840,7 +983,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -860,6 +1002,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>lib</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

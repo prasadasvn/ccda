@@ -1,32 +1,37 @@
-package com.ids.ccda.sections
+package com.ids.ccda.templates.sections.body
 
+import com.ids.ccda.Document
+import com.ids.ccda.documents.ccd.Comment
 import com.ids.ccda.documents.ccd.uid.DocUid
 import com.ids.ccda.oids.HL7_OID
 import groovy.xml.MarkupBuilder
 
-class MedicationsSection {
-    public static final TITLE = "Medications"
-    public static final SECTION_CODE = [code:"10160-0", displayName:"HISTORY OF MEDICATION USE"] + HL7_OID.LOINC
-    public static final SECTION = "medications"
-    def ATTRS = ["code", "name", "routeCode", "routeName", "dosageQuantity", "dosageUnit", "startDate", "stopDate", "instructions"  ]
+@Mixin(Comment)
+class MedicationsAdministeredSectionTemplate implements BodySectionTemplate {
+    public static final TITLE = "Medications Administered"
+    public static final MAP_KEY = "medicationsAdministered"
+    public static final SECTION_CODE = [code:"29549-3", displayName:"MEDICATIONS ADMINISTERED"] + HL7_OID.LOINC
 
-    def map
+    def ATTRS = ["code", "name", "routeCode", "routeName", "dosageQuantity", "dosageUnit", "startDate", "stopDate", "instructions"  ]
     DocUid docUid
     MarkupBuilder builder
+    Map map
     def medications = [:]
 
-    MedicationsSection(builder, map =[:]) {
-        this.builder = builder
-        this.docUid = map.docUid
-        this.map = map
-        this.medications = this.map.medications
+    MedicationsAdministeredSectionTemplate(Document doc) {
+        this.builder = doc.builder
+        this.docUid = doc.docUid
+        this.map = doc.map
+        this.medications = map.medicationsAdministered ?: [:]
         generate()
     }
 
     def generate(){
+      builder.mkp.comment(comment())
       builder.component(){
           section(){
-              templateId(HL7_OID.MEDICATIONS_SECTION_TEMPLATE_ID)
+              mkp.comment(comment())
+              templateId(HL7_OID.MEDICATIONS_ADMINISTERED_SECTION_TEMPLATE_ID)
               code(SECTION_CODE)
               title(TITLE)
               generateNormativeText()
@@ -51,7 +56,7 @@ class MedicationsSection {
                     }
                 }
                 medications.each{ id, medication ->
-                    def uid = docUid.secId(SECTION,id)
+                    def uid = docUid.secId(MAP_KEY,id)
                     tr(){
                         td{content(ID:"medication-${uid}",medication.name) }
                         td(medication.code)
@@ -65,7 +70,7 @@ class MedicationsSection {
     }
 
     def generateEntry( medicationId,medication = [:]){
-      def uid = docUid.secId(SECTION,medicationId)
+      def uid = docUid.secId(MAP_KEY,medicationId)
       builder.entry(){
           // MEDICATION ACTIVITY TEMPLATE
           substanceAdministration(classCode:"SBADM", moodCode:"EVN"){
@@ -83,16 +88,12 @@ class MedicationsSection {
                               operator:"A"){
                    period( value:"numeric time", unit:"unit of time abbreviation")//dynamic
                }  */
-               routeCode( code: medication.routeCode,
-                          codeSystem:"2.16.840.1.113883.3.88.12.3221.8.7",
-                          codeSystemName:"NCI Thesaurus",
-                          displayName:medication.routeName
-               )
+              routeCode( [code: medication.routeCode, displayName:medication.routeName] + HL7_OID.NCI_THESAURUS)
               doseQuantity( value:medication.dosageQuantity, unit:medication.dosageUnit)  //dynamic
               consumable(){     //MEDICATION INFORMATION TEMPLATE
                   manufacturedProduct(classCode:"MANU"){
                       templateId(HL7_OID.MEDICATION_INFORMATION_TEMPLATE_ID)
-                      id(root: docUid.medInfoId(medicationId) )
+                      id(root: docUid.medAdminInfoId(medicationId) )
                       manufacturedMaterial(){
                           code([code:medication.code,  displayName: medication.name] + HL7_OID.RX_NORM){ //dynamic
                               //originalText(){ reference(value:"medication-${uid}") }//dynamic
@@ -101,7 +102,7 @@ class MedicationsSection {
                   }
               }
               //INSTRUCTIONS
-              entryRelationship(typeCode:"SUBJ", inversionInd:"true"){
+/*              entryRelationship(typeCode:"SUBJ", inversionInd:"true"){
                   act(classCode:"ACT", moodCode:"INT"){
                       templateId(HL7_OID.INSTRUCTIONS_TEMPLATE_ID)
                       code(["xsi:type":"CE", code: "409073007", displayName: "Education"] + HL7_OID.SNOMED)
@@ -111,7 +112,7 @@ class MedicationsSection {
                       }
                       statusCode(code:"completed")
                   }
-              }
+              }*/
 
           }
       }

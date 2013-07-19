@@ -1,34 +1,36 @@
-package com.ids.ccda.sections
+package com.ids.ccda.templates.sections.body
 
+import com.ids.ccda.Document
+import com.ids.ccda.documents.ccd.Comment
 import com.ids.ccda.documents.ccd.uid.DocUid
 import com.ids.ccda.oids.HL7_OID
 import groovy.xml.MarkupBuilder
-
-class ProblemsSection {
+@Mixin(Comment)
+class ProblemsSectionTemplate  implements BodySectionTemplate{
     public static final TITLE = "Problems"
+    public static final MAP_KEY = "problems"
     public static final SECTION_CODE = [code:"11450-4", displayName:"PROBLEM LIST"] + HL7_OID.LOINC
     public static final CONCERN_CODE = [code:"CONC",displayName:"Concern"] + HL7_OID.ACT_CLASS
     public static final PROBLEM_CODE = [code:"55607006",  displayName:"Problem"] + HL7_OID.SNOMED  //codeSystem: "2.16.840.1.113883.6.96",
     public static final PROBLEM_STATUS_CODE = [code:"33999-4", displayName: "Status"] + HL7_OID.LOINC
-    public static final SECTION = "problems"
-    def ATTRS = [ "code", "name", "statusCode", "statusName", "onsetDate", "resolutionDate" ]
 
-    def map
+    def ATTRS = [ "code", "name", "statusCode", "statusName", "onsetDate", "resolutionDate" ]
     DocUid docUid
     MarkupBuilder builder
+    Map map
     def problems = [:]
 
-
-    ProblemsSection(builder, map =[:]) {
-        this.builder = builder
-        this.docUid = map.docUid
-        this.map = map
-        this.problems = this.map.problems
+    ProblemsSectionTemplate(Document doc) {
+        this.builder = doc.builder
+        this.docUid = doc.docUid
+        this.map = doc.map
+        this.problems = map.problems ?: [:]
         generate()
     }
 
     def generate(){
-      builder.component(){
+        builder.mkp.comment(comment())
+        builder.component(){
           section(){
               templateId(HL7_OID.PROBLEMS_SECTION_TEMPLATE_ID)
               code( SECTION_CODE )
@@ -46,7 +48,7 @@ class ProblemsSection {
           content("ID":"problems")
           list(listType:"ordered"){
             problems.each { id,problem ->
-               def uid = docUid.secId(SECTION,id)
+               def uid = docUid.secId(MAP_KEY,id)
                 item{
                   content("ID":"problem-${uid}",problem.name)
                   content("ID":"status-${uid}","Status: ${problem.statusName}")
@@ -57,7 +59,7 @@ class ProblemsSection {
     }
 
     def generateEntry( problemId,problem = [:]){
-        def uid = docUid.secId(SECTION,problemId)
+        def uid = docUid.secId(MAP_KEY,problemId)
         builder.entry(){
           // PROBLEM CONCERN ACT TEMPLATE
         entry(typeCode:"DRIV"){

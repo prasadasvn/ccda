@@ -1,29 +1,33 @@
-package com.ids.ccda.sections
+package com.ids.ccda.templates.sections.body
 
+import com.ids.ccda.Document
+import com.ids.ccda.documents.ccd.Comment
 import com.ids.ccda.documents.ccd.uid.DocUid
 import com.ids.ccda.oids.HL7_OID
 import groovy.xml.MarkupBuilder
 
-class ImmunizationsSection {
+@Mixin(Comment)
+class ImmunizationsSectionTemplate   implements BodySectionTemplate{
     public static final TITLE = "Immunizations"
+    public static final MAP_KEY = "immunizations"
     public static final SECTION_CODE = [code:"11369-6", displayName:"HISTORY OF IMMUNIZATIONS"] + HL7_OID.LOINC
-    public static final SECTION = "immunizations"
-    def ATTRS = [ "code", "name", "date"  ]
 
-    def map
+    def ATTRS = [ "code", "name", "date"  ]
     DocUid docUid
     MarkupBuilder builder
+    Map map
     def immunizations = [:]
 
-    ImmunizationsSection(builder, map =[:]) {
-        this.builder = builder
-        this.docUid = map.docUid
-        this.map = map
-        this.immunizations = this.map.immunizations
+    ImmunizationsSectionTemplate(Document doc) {
+        this.builder = doc.builder
+        this.docUid = doc.docUid
+        this.map = doc.map
+        this.immunizations = map.immunizations ?: [:]
         generate()
     }
 
     def generate(){
+      builder.mkp.comment(comment())
       builder.component(){
           section(){
               templateId(HL7_OID.IMMUNIZATION_SECTION_TEMPLATE_ID)
@@ -49,7 +53,7 @@ class ImmunizationsSection {
                     }
                 }
                 immunizations.each{ id,immunization ->
-                    def uid = docUid.secId(SECTION,id)
+                    def uid = docUid.secId(MAP_KEY,id)
                     tr(){
                         td{ content(ID:"immunization-${uid}",immunization.name) }
                         td(immunization.date)
@@ -61,7 +65,7 @@ class ImmunizationsSection {
     }
 
     def generateEntry(immunizationId, immunization = [:]){
-      def uid = docUid.secId(SECTION,immunizationId)
+      def uid = docUid.secId(MAP_KEY,immunizationId)
       builder.entry( typeCode:"DRIV"){
           //Immunization Activity Template
           substanceAdministration(classCode:"SBADM", moodCode:"EVN", negationInd:"false"){

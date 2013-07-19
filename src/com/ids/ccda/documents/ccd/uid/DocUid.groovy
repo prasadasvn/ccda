@@ -10,11 +10,12 @@ class DocUid {
                     allergies: "1" ,
                     immunizations: "2",
                     medications: "3",
-                    problems: "4",
-                    results: "5",
-                    socialHistory: "6",
-                    vitalSigns: "7",
-                    plans: "8"
+                    medicationsAdministered: "4",
+                    problems: "5",
+                    results: "6",
+                    socialHistory: "7",
+                    vitalSigns: "8",
+                    plans: "9"
             ]
     ]
     DocUid(root) {
@@ -32,6 +33,10 @@ class DocUid {
    def medInfoId(id = UNKNOWN){
        "${root}.${DOCS.section.medications}.1.${id}"
    }
+
+    def medAdminInfoId(id = UNKNOWN){
+        "${root}.${DOCS.section.medicationsAdministered}.1.${id}"
+    }
 
     def probObsId(id = UNKNOWN){
         "${root}.${DOCS.section.problems}.1.${id}"

@@ -1,6 +1,6 @@
 package com.ids.ccda
 
-import com.ids.ccda.sections.AllergiesSection
+import com.ids.ccda.templates.header.OldGeneralHeaderTemplate
 import groovy.xml.MarkupBuilder
 
 class CCDA {
@@ -38,7 +38,7 @@ class CCDA {
        writer = new StringWriter()
        builder = new MarkupBuilder(writer)
         builder.ClinicalDocument(){
-            new GeneralHeaderTemplate(builder, map).builder
+            new OldGeneralHeaderTemplate(builder, map).builder
 
 
         }

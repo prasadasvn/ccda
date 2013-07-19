@@ -1,17 +1,10 @@
-package com.ids.ccda
+package com.ids.ccda.templates.header
 
 import com.ids.ccda.oids.HL7_OID
 import com.ids.ccda.oids.IDS_OID
 import groovy.xml.MarkupBuilder
 
-/**
- * Created with IntelliJ IDEA.
- * User: josh
- * Date: 3/7/13
- * Time: 12:49 PM
- * To change this template use File | Settings | File Templates.
- */
-class GeneralHeaderTemplate {
+class OldGeneralHeaderTemplate {
     public static final CLINIC_SUMMARY = [code: "34133-9",  displayName: "Summarization of Episode Note"]
 
     def map
@@ -34,7 +27,7 @@ class GeneralHeaderTemplate {
                       ]
 
     def AUTHOR =  [ companyName: "Integrity Digital Solutions, LLC", softwareName: "Integrity EMR",
-                    addressLine1: "6420 South General Bruce Drive", city: "Temple", state: "TX", zipCode: "76524",
+                    addressLine1: "6420 South General Bruce Drive", city: "Temple", state: "TX", zipCode: "76502",
                     phone: "(877) 905-4680",
                     code:[ code:"207W00000X", displayName:"OPHTHALMOLOGY", codeSystem:"2.16.840.1.113883.6.101" ]  ]
 
@@ -43,7 +36,7 @@ class GeneralHeaderTemplate {
     def ENCOUNTER_ATTRS = [ "startDate", "endDate", "attendingProvider" /*npi, firstName, lastName  */]
 
 
-    GeneralHeaderTemplate(builder, map = [:]) {
+    OldGeneralHeaderTemplate(builder, map = [:]) {
         this.builder = builder
         this.map = map
         this.patient = map.patient

@@ -1,43 +1,43 @@
-package com.ids.ccda.sections
+package com.ids.ccda.templates.sections.body
 
+import com.ids.ccda.Document
+import com.ids.ccda.documents.ccd.Comment
 import com.ids.ccda.documents.ccd.uid.DocUid
 import com.ids.ccda.oids.HL7_OID
 import groovy.xml.MarkupBuilder
-
-class PlanOfCareSection {
+@Mixin(Comment)
+class PlanOfCareSectionTemplate  implements BodySectionTemplate{
     public static final TITLE = "Care Plan"
+    public static final MAP_KEY = ["planEncounters", "planProcedures", "planObservations", "planInstructions"]
     public static final SECTION_CODE = [code:"18776-5", displayName:"TREATMENT PLAN"] + HL7_OID.LOINC
-    public static final SECTION = "plans"
-    def ATTRS = [  ]
-    def ENCOUNTER_ATTRS = ["visitCode", "visitName", "date", "instructions"]
-    def OBSERVATION_ATTRS = [ "codeWithSystem" /*code,displayName,codeSystem,codeSystemName*/, "date"]
-    def PROCEDURE_ATTRS = [ "codeWithSystem" /*code,displayName,codeSystem,codeSystemName*/, "date"]
-    def INSTRUCTIONS_ATTRS = [ "instructions", "goal"]
 
-    def map
+    def ENCOUNTER_ATTRS = ["visitCode", "visitName", "date", "instructions"]
+    def OBSERVATION_ATTRS = [ "code", "name", "codeSystem", /*either SNOMED or LOINC"*/ "date"]
+    def PROCEDURE_ATTRS = [ "code", "name", "codeSystem", /*either SNOMED or LOINC"*/ "date"]
+    def INSTRUCTIONS_ATTRS = [ "instructions", "goal"]
     DocUid docUid
     MarkupBuilder builder
-    def plans = [ instructions: [:],encounters: [:], procedures: [:] ]
+    Map map
 
-    PlanOfCareSection(builder, map =[:]) {
-        this.builder = builder
-        this.docUid = map.docUid
-        this.map = map
-        this.plans = this.map.plans
+    PlanOfCareSectionTemplate(Document doc) {
+        this.builder = doc.builder
+        this.docUid = doc.docUid
+        this.map = doc.map ?: [:]
         generate()
     }
 
     def generate(){
+      builder.mkp.comment(comment())
       builder.component(){
           section(){
               templateId(HL7_OID.PLAN_OF_CARE_TEMPLATE_ID)
               code(SECTION_CODE)
               title(TITLE)
               generateNormativeText()
-              plans.encounters.each{ encounterId, encounter -> generateEncounter(encounterId, encounter)}
-              plans.procedures.each{ procedureId, procedure -> generateProcedure(procedureId, procedure)}
-              plans.observations.each{ observationId, observation -> generateObservation(observationId, observation)}
-              plans.instructions.each{ instructionId, instruction -> generateInstruction(instructionId,instruction)}
+              map.planEncounters.each{ encounterId, encounter -> generateEncounter(encounterId, encounter)}
+              map.planProcedures.each{ procedureId, procedure -> generateProcedure(procedureId, procedure)}
+              map.planObservations.each{ observationId, observation -> generateObservation(observationId, observation)}
+              map.planInstructions.each{ instructionId, instruction -> generateInstruction(instructionId,instruction)}
           }
       }
     }
@@ -54,10 +54,10 @@ class PlanOfCareSection {
                     }
                 }
                 tbody(){
-                  plans.encounters.each{ encounterId, encounter -> generateEncounterNormativeText(encounterId, encounter)}
-                  plans.procedures.each{ procedureId, procedure -> generateProcedureNormativeText(procedureId, procedure)}
-                  plans.observations.each{ observationId, observation -> generateObservationNormativeText(observationId, observation)}
-                  plans.instructions.each{ instructionId, instruction -> generateInstructionNormativeText(instructionId,instruction)}
+                  map.planEncounters.each{ encounterId, encounter -> generateEncounterNormativeText(encounterId, encounter)}
+                  map.planProcedures.each{ procedureId, procedure -> generateProcedureNormativeText(procedureId, procedure)}
+                  map.planObservations.each{ observationId, observation -> generateObservationNormativeText(observationId, observation)}
+                  map.planInstructions.each{ instructionId, instruction -> generateInstructionNormativeText(instructionId,instruction)}
                 }
              }
         }
@@ -77,7 +77,7 @@ class PlanOfCareSection {
         println "observation: ${observation}"
         def uid = docUid.planObservationId(observationId)
         builder.tr(){
-            td(colspan:"2"){ content(ID:"observation-${uid}", observation?.codeWithSystem?.displayName)}
+            td(colspan:"2"){ content(ID:"observation-${uid}", observation?.name)}
             td(observation.date)
             td("Plan")
         }
@@ -86,7 +86,7 @@ class PlanOfCareSection {
     def generateProcedureNormativeText(procedureId, procedure = [:]){
         def uid = docUid.planProcedureId(procedureId)
         builder.tr(){
-            td(colspan:"2"){ content(ID:"procedure-${uid}", procedure?.codeWithSystem?.displayName) }
+            td(colspan:"2"){ content(ID:"procedure-${uid}", procedure?.name) }
             td(procedure.date)
             td("Plan")
         }
@@ -131,7 +131,7 @@ class PlanOfCareSection {
         observation(classCode:"OBS", moodCode:"RQO"){
             templateId(HL7_OID.PLAN_OF_CARE_ACTIVITY_OBSERVATION_TEMPLATE_ID)
             id(docUid.planObservationId(observationId))
-            code(observationMap.codeWithSystem)
+            code([code:observationMap.code, displayName: observationMap.name] + deriveCodingSystem(observationMap.codeSystem) )
             statusCode(code:"new")
             effectiveTime(){
                 center(value:observationMap.date)
@@ -146,7 +146,7 @@ class PlanOfCareSection {
         procedure(moodCode:"RQO", classCode:"PROC"){
             templateId(HL7_OID.PLAN_OF_CARE_ACTIVITY_PROCEDURE_TEMPLATE_ID)
             id(docUid.planProcedureId(procedureId))
-            code(procedureMap.codeWithSystem)
+            code([procedureMap.code, procedureMap.name] + deriveCodingSystem(procedureMap.codeSystem))
             statusCode(code:"new")
             effectiveTime(){
                 center(value:procedureMap.date)
@@ -168,6 +168,17 @@ class PlanOfCareSection {
                 statusCode(code:"completed")
             }
         }
+    }
+
+    private def deriveCodingSystem(str){
+        def codingSystem = null
+        switch(str){
+         case "CPT" : codingSystem = HL7_OID.CPT; break
+         case "SNOMED" : codingSystem = HL7_OID.SNOMED; break
+         case "LOINC" : codingSystem = HL7_OID.LOINC; break
+         default: null
+        }
+        return codingSystem
     }
 
 

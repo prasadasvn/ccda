@@ -1,32 +1,34 @@
-package com.ids.ccda.sections
+package com.ids.ccda.templates.sections.body
 
+import com.ids.ccda.Document
+import com.ids.ccda.documents.ccd.Comment
 import com.ids.ccda.documents.ccd.uid.DocUid
 import com.ids.ccda.oids.HL7_OID
 import groovy.xml.MarkupBuilder
-
-class AllergiesSection {
-
+@Mixin(Comment)
+class AllergiesSectionTemplate  implements BodySectionTemplate {
     //TODO: make methods for effective time, statuses, and mapping of reaction
     public static final TITLE = "ALLERGIES, ADVERSE REACTIONS, ALERTS"
+    public static final MAP_KEY = "allergies"
     public static final SECTION_CODE = [code:"48765-2", displayName:"Allergies, adverse reactions, alerts"] + HL7_OID.LOINC
     public static final ALLERGY_INTOLERANCE_CODE = [code:"ASSERTION",codeSystem:"2.16.840.1.113883.5.4"]
-    public static final SECTION = "allergies"
-    def ATTRS = [ "statusCode", "effectiveTimeLow", "effectiveTimeHigh", "reactionCode", "reactionName", "drugCode", "drugName" ]
 
-    def map
+    def ATTRS = [ "statusCode", "effectiveTimeLow", "effectiveTimeHigh", "reactionCode", "reactionName", "drugCode", "drugName" ]
     DocUid docUid
     MarkupBuilder builder
+    Map map
     def allergies = [:]
 
-    AllergiesSection( MarkupBuilder builder, map) {
-        this.map = map
-        this.docUid = map.docUid
-        this.allergies = map.allergies
-        this.builder = builder
+    AllergiesSectionTemplate( Document doc ) {
+        this.builder = doc.builder
+        this.docUid = doc.docUid
+        this.map = doc.map
+        this.allergies = this.map.allergies ?: [:]
         generate()
     }
 
     def generate(){
+      builder.mkp.comment(comment())
       builder.component(){
           section(){
               templateId(HL7_OID.ALLERGIES_SECTION_TEMPLATE_ID)
@@ -51,7 +53,7 @@ class AllergiesSection {
                   }
               }
               allergies.each{ id,allergy ->
-                  def uid = docUid.secId(SECTION,id)
+                  def uid = docUid.secId(MAP_KEY,id)
                   tr{
                       td(allergy.drugName)
                       td{ content(ID:"reaction-${uid}",allergy.reactionName ) }
@@ -64,8 +66,7 @@ class AllergiesSection {
     }
 
     def generateEntry(allergyId,allergy = [:]){
-        def uid = docUid.secId(SECTION,allergyId)
-        println "uid:${uid}"
+        def uid = docUid.secId(MAP_KEY,allergyId)
         builder.entry(typeCode:"DRIV"){
 
             act(classCode:"ACT", moodCode: "EVN"){

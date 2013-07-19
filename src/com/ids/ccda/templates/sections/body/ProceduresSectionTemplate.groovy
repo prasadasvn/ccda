@@ -1,31 +1,34 @@
-package com.ids.ccda.sections
+package com.ids.ccda.templates.sections.body
 
+import com.ids.ccda.Document
+import com.ids.ccda.documents.ccd.Comment
 import com.ids.ccda.documents.ccd.uid.DocUid
 import com.ids.ccda.oids.HL7_OID
 import groovy.xml.MarkupBuilder
 
-
-class ProceduresSection {
+@Mixin(Comment)
+class ProceduresSectionTemplate implements BodySectionTemplate{
     public static final TITLE = "Procedures"
+    public static final MAP_KEY = "procedures"
     public static final SECTION_CODE = [code:"47519-4", displayName:"HISTORY OF PROCEDURES"] + HL7_OID.LOINC
-    public static final SECTION = "procedures"
-    def ATTRS = [ "code", "name", "date", "bodySiteCode", "bodySiteName", "performer"  ]
 
-    def map
+    def ATTRS = [ "code", "name", "date", "bodySiteCode", "bodySiteName", "performer"  ]
     DocUid docUid
     MarkupBuilder builder
+    Map map
     def procedures = [:]
 
-    ProceduresSection(builder, map =[:]) {
-        this.builder = builder
-        this.docUid = map.docUid
-        this.map = map
-        this.procedures = this.map.procedures
+    ProceduresSectionTemplate(Document doc) {
+        this.builder = doc.builder
+        this.docUid = doc.docUid
+        this.map = doc.map
+        this.procedures = map.procedures ?: [:]
         generate()
     }
 
     def generate(){
-      builder.component(){
+        builder.mkp.comment(comment())
+        builder.component(){
           section(){
               templateId(HL7_OID.PROCEDURES_SECTION_TEMPLATE_ID)
               code( SECTION_CODE )
@@ -48,7 +51,7 @@ class ProceduresSection {
                     }
                 }
                 procedures.each{ id, procedure ->
-                    def uid = docUid.secId(SECTION,id)
+                    def uid = docUid.secId(MAP_KEY,id)
                     tr{
                         td{ content(ID:"procedure-${uid}",procedure.name)  }
                         td(procedure.date)
@@ -59,7 +62,7 @@ class ProceduresSection {
     }
 
     def generateEntry( procedureId, pro = [:]){
-      def uid = docUid.secId(SECTION,procedureId)
+      def uid = docUid.secId(MAP_KEY,procedureId)
       builder.entry( typeCode:"DRIV"){
         //PROCEDURE ACTIVITY PROCEDURE
           procedure(classCode:"PROC", moodCode:"EVN"){
