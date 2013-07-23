@@ -19,7 +19,7 @@
     <file path="/AllergiesSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1368125479391" ignored="false" />
     <file path="$PROJECT_DIR$/../SledgeHammer/grails-app/services/com/ids/emr/server/erx/RcopiaErxService.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1363726790507" ignored="false" />
     <file path="$PROJECT_DIR$/../SledgeHammer/grails-app/controllers/com/ids/emr/encounter/EncounterController.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1363726801491" ignored="false" />
-    <file path="/fragment.java" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371743035692" ignored="false" />
+    <file path="/fragment.java" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1374529499271" ignored="false" />
     <file path="/ProblemsSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1368114990554" ignored="false" />
     <file path="/EmrErxDomains" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1364320899148" ignored="false" />
     <file path="/ProceduresSection.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1368125908239" ignored="false" />
@@ -67,10 +67,10 @@
     <file path="$PROJECT_DIR$/../SledgeHammer/inplace-plugins/gwt-0.5/grails-app/controllers/org/codehaus/groovy/grails/plugins/gwt/GwtController.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1369408686756" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/html5/xhtml5.xsd" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371215321577" ignored="false" />
     <file path="/AuthorTemplateTests.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371492390210" ignored="false" />
-    <file path="/AllergiesSectionTemplate.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371663540239" ignored="false" />
+    <file path="/AllergiesSectionTemplate.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1374605254163" ignored="false" />
     <file path="/Document.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371227668998" ignored="false" />
     <file path="/ClinicalSummary.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371221834775" ignored="false" />
-    <file path="/AllergiesSectionTemplateTests.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371243801961" ignored="false" />
+    <file path="/AllergiesSectionTemplateTests.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1374518819449" ignored="false" />
     <file path="/ImmunizationsSectionTemplateTests.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371663680698" ignored="false" />
     <file path="/MedicationsAdministeredSectionTemplateTests.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371245868259" ignored="false" />
     <file path="/MedicationsSectionTemplateTests.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1371245976084" ignored="false" />
@@ -111,6 +111,11 @@
     <file path="$PROJECT_DIR$/../DataExtractor/src/com/ids/Backup.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1372181025110" ignored="false" />
     <file path="$PROJECT_DIR$/../DataExtractor/src/com/ids/DbProcessor.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1372181025110" ignored="false" />
     <file path="$PROJECT_DIR$/../DataExtractor/src/com/ids/local/LocalStorage.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1372181025110" ignored="false" />
+    <file path="/RequireMapFields.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1374605138226" ignored="false" />
+    <file path="/ClazzForMapRequiredMapFields.java" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1374585066577" ignored="false" />
+    <file path="/ClazzForRequiredMapFields.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1374585128070" ignored="false" />
+    <file path="/TestRequiredMapFields.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1374585229636" ignored="false" />
+    <file path="/RequiredMapFieldsTests.groovy" changelist="95594206-fa17-4356-93c1-7b9067ccaa3b" time="1374605084612" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,38 +132,6 @@
     </disable_hints>
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/com/ids/ccda/templates/sections/body/AllergiesSectionTemplate.groovy" line="21" class="com.ids.ccda.templates.sections.body.AllergiesSectionTemplate" package="com.ids.ccda.templates.sections.body">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/ids/ccda/util/IDSBuilderSupport.java" line="95" class="com.ids.ccda.util.IDSBuilderSupport" package="com.ids.ccda.util">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -195,6 +168,38 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/ids/ccda/templates/sections/body/AllergiesSectionTemplate.groovy" line="25" class="com.ids.ccda.templates.sections.body.AllergiesSectionTemplate" package="com.ids.ccda.templates.sections.body">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/ids/ccda/util/IDSBuilderSupport.java" line="95" class="com.ids.ccda.util.IDSBuilderSupport" package="com.ids.ccda.util">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
@@ -204,13 +209,24 @@
     <favorites_list name="CCDA" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.39507693">
+    <splitter split-orientation="horizontal" split-proportion="0.38316497">
       <split-first>
         <leaf>
-          <file leaf-file-name="CDAMarkupBuilderTests.groovy" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/tests/unit/com/ids/ccda/util/CDAMarkupBuilderTests.groovy">
+          <file leaf-file-name="AllergiesSectionTemplateTests.groovy" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/unit/com/ids/ccda/templates/sections/body/AllergiesSectionTemplateTests.groovy">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="96" column="60" selection-start="3307" selection-end="3307" vertical-scroll-proportion="0.47791165">
+                <state line="36" column="41" selection-start="1134" selection-end="1134" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="e#51#79#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Document.groovy" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/Document.groovy">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="28" column="46" selection-start="523" selection-end="523" vertical-scroll-proportion="0.5955882">
                   <folding />
                 </state>
               </provider>
@@ -220,10 +236,19 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="CDAMarkupBuilder.groovy" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/util/CDAMarkupBuilder.groovy">
+          <file leaf-file-name="AllergiesSectionTemplate.groovy" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/templates/sections/body/AllergiesSectionTemplate.groovy">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="57" column="47" selection-start="1782" selection-end="1782" vertical-scroll-proportion="0.6447368">
+                <state line="27" column="45" selection-start="1315" selection-end="1315" vertical-scroll-proportion="0.49475262">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="RequireMapFields.groovy" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/mixins/RequireMapFields.groovy">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="22" column="1" selection-start="781" selection-end="781" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -244,30 +269,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/templates/sections/body/MedicationsAdministeredSectionTemplate.groovy" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/templates/sections/body/MedicationsSectionTemplate.groovy" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/templates/sections/body/PlanOfCareSectionTemplate.groovy" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/templates/sections/body/ProblemsSectionTemplate.groovy" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/templates/sections/body/ProceduresSectionTemplate.groovy" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/templates/sections/body/ResultsSectionTemplate.groovy" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/templates/sections/body/SocialHistorySectionTemplate.groovy" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/templates/sections/body/VitalSignsSectionTemplate.groovy" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/templates/header/RecordTargetTemplate.groovy" />
-        <option value="$PROJECT_DIR$/src/com/ids/ccda/util/IDSMarkupBuilderHelper.java" />
         <option value="$PROJECT_DIR$/src/com/ids/ccda/util/IDSMarkupBuilder.java" />
         <option value="$PROJECT_DIR$/tests/unit/com/ids/ccda/util/IDSMarkupBuilderTests.groovy" />
         <option value="$PROJECT_DIR$/src/com/ids/ccda/util/IDSBuilderSupport.java" />
         <option value="$USER_HOME$/customers/spectrum/compulink_integrity_appointment_reason_mapping.csv" />
         <option value="$PROJECT_DIR$/src/com/ids/ccda/util/CDAMarkupBuilder.groovy" />
         <option value="$PROJECT_DIR$/tests/unit/com/ids/ccda/util/CDAMarkupBuilderTests.groovy" />
+        <option value="$PROJECT_DIR$/tests/unit/com/ids/ccda/templates/sections/body/AllergiesSectionTemplateTests.groovy" />
+        <option value="$PROJECT_DIR$/src/com/ids/ccda/documents/ccd/mixins/Comment.groovy" />
+        <option value="$PROJECT_DIR$/src/com/ids/ccda/documents/ccd/mixins/RequireMapFields.groovy" />
+        <option value="$PROJECT_DIR$/src/com/ids/ccda/mixins/Comment.groovy" />
+        <option value="$PROJECT_DIR$/tests/unit/com/ids/ccda/mixins/ClazzForMapRequiredMapFields.java" />
+        <option value="$PROJECT_DIR$/tests/unit/com/ids/ccda/mixins/TestRequiredMapFields.groovy" />
+        <option value="$PROJECT_DIR$/tests/unit/com/ids/ccda/mixins/ClazzForRequiredMapFields.groovy" />
+        <option value="$PROJECT_DIR$/tests/unit/com/ids/ccda/mixins/RequiredMapFieldsTests.groovy" />
+        <option value="$PROJECT_DIR$/src/com/ids/ccda/mixins/RequireMapFields.groovy" />
+        <option value="$PROJECT_DIR$/src/com/ids/ccda/templates/sections/body/AllergiesSectionTemplate.groovy" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1919" />
+    <option name="x" value="62" />
     <option name="y" value="-4" />
-    <option name="width" value="1922" />
-    <option name="height" value="1085" />
+    <option name="width" value="2572" />
+    <option name="height" value="1422" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -311,6 +336,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -360,10 +386,6 @@
               <option name="myItemId" value="ccda" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -380,6 +402,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ccda" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mixins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -471,10 +497,53 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CCDA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CCDA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ccda" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mixins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CCDA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CCDA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ccda" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ccd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -492,17 +561,17 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="unit.com.ids.ccda.mixins" />
       <recent name="unit.com.ids.ccda.util" />
       <recent name="unit.com.ids.ccda.templates" />
       <recent name="unit.com.ids.ccda.templates.sections.body" />
       <recent name="com.ids.ccda" />
-      <recent name="com.ids.ccda.templates.header" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/lib" />
@@ -510,85 +579,16 @@
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="com.ids.ccda.oids.HL7_OID" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$USER_HOME$/" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.ids.ccda" />
       <recent name="com.ids.ccda.templates" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$USER_HOME$/" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.CDAMarkupBuilderTests.testArgsHandler">
-    <configuration default="false" name="CDAMarkupBuilderTests.testReturnNullFlavor" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="CCDA" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="unit.com.ids.ccda.util" />
-      <option name="MAIN_CLASS_NAME" value="unit.com.ids.ccda.util.CDAMarkupBuilderTests" />
-      <option name="METHOD_NAME" value="testReturnNullFlavor" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="CDAMarkupBuilderTests.testReturnSpecifiedNullFlavor" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="CCDA" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="unit.com.ids.ccda.util" />
-      <option name="MAIN_CLASS_NAME" value="unit.com.ids.ccda.util.CDAMarkupBuilderTests" />
-      <option name="METHOD_NAME" value="testReturnSpecifiedNullFlavor" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="CDAMarkupBuilderTests.testLinkedHashMapHandlerReturnsNullFlavorForNnullCheck" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="CCDA" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="unit.com.ids.ccda.util" />
-      <option name="MAIN_CLASS_NAME" value="unit.com.ids.ccda.util.CDAMarkupBuilderTests" />
-      <option name="METHOD_NAME" value="testLinkedHashMapHandlerReturnsNullFlavorForNnullCheck" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.RequiredMapFieldsTests">
     <configuration default="false" name="CDAMarkupBuilderTests" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="CCDA" />
@@ -621,6 +621,75 @@
       <option name="MAIN_CLASS_NAME" value="unit.com.ids.ccda.util.CDAMarkupBuilderTests" />
       <option name="METHOD_NAME" value="testArgsHandler" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="AllergiesSectionTemplateTests.testSomething" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="CCDA" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="unit.com.ids.ccda.templates.sections.body" />
+      <option name="MAIN_CLASS_NAME" value="unit.com.ids.ccda.templates.sections.body.AllergiesSectionTemplateTests" />
+      <option name="METHOD_NAME" value="testSomething" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="AllergiesSectionTemplateTests.testNullFlavors" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="CCDA" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="unit.com.ids.ccda.templates.sections.body" />
+      <option name="MAIN_CLASS_NAME" value="unit.com.ids.ccda.templates.sections.body.AllergiesSectionTemplateTests" />
+      <option name="METHOD_NAME" value="testNullFlavors" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="RequiredMapFieldsTests" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="CCDA" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="unit.com.ids.ccda.mixins" />
+      <option name="MAIN_CLASS_NAME" value="unit.com.ids.ccda.mixins.RequiredMapFieldsTests" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -702,19 +771,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.CDAMarkupBuilderTests.testReturnNullFlavor" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.CDAMarkupBuilderTests.testReturnSpecifiedNullFlavor" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.CDAMarkupBuilderTests.testLinkedHashMapHandlerReturnsNullFlavorForNnullCheck" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.CDAMarkupBuilderTests" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.CDAMarkupBuilderTests.testArgsHandler" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.CDAMarkupBuilderTests" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.CDAMarkupBuilderTests.testArgsHandler" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.AllergiesSectionTemplateTests.testSomething" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.AllergiesSectionTemplateTests.testNullFlavors" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.RequiredMapFieldsTests" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.CDAMarkupBuilderTests.testArgsHandler" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.CDAMarkupBuilderTests" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.CDAMarkupBuilderTests.testLinkedHashMapHandlerReturnsNullFlavorForNnullCheck" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.CDAMarkupBuilderTests.testReturnSpecifiedNullFlavor" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.CDAMarkupBuilderTests.testReturnNullFlavor" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.RequiredMapFieldsTests" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.AllergiesSectionTemplateTests.testNullFlavors" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.AllergiesSectionTemplateTests.testSomething" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.CDAMarkupBuilderTests.testArgsHandler" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.CDAMarkupBuilderTests" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -732,19 +801,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1919" y="-4" width="1922" height="1085" extended-state="6" />
-    <editor active="false" />
+    <frame x="62" y="-4" width="2572" height="1422" extended-state="6" />
+    <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32870865" sideWeight="0.4997239" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1514649" sideWeight="0.32692307" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.06296691" sideWeight="0.8370607" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18001105" sideWeight="0.7534685" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1514649" sideWeight="0.33760685" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1629393" sideWeight="0.28768635" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952183" sideWeight="0.71231365" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24653149" sideWeight="0.24627277" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24653149" sideWeight="0.7537272" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -752,7 +822,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20170757" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32870865" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -825,45 +894,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/unit/com/ids/ccda/templates/CCDTests.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="65" selection-start="497" selection-end="497" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/Document.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="49" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/templates/header/RecordTargetTemplate.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="18" selection-start="1328" selection-end="1328" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/documents/ccd/CCD.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="51" selection-start="1946" selection-end="1946" vertical-scroll-proportion="0.030549899" />
-      </provider>
-    </entry>
-    <entry file="jar://$GRAILS_ROOT$/lib/groovy-all-1.7.8.jar!/org/codehaus/groovy/runtime/InvokerHelper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="170" selection-end="170" vertical-scroll-proportion="0.15400411" />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/apps/java/src.zip!/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="17" selection-start="5193" selection-end="5193" vertical-scroll-proportion="-0.59450173" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/templates/sections/body/AllergiesSectionTemplate.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="6" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/util/IDSBuilderSupport.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="93" column="0" selection-start="3211" selection-end="3230" vertical-scroll-proportion="0.0">
@@ -874,13 +904,6 @@
     <entry file="file://$PROJECT_DIR$/NIST_CCDA.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="672" column="53" selection-start="26055" selection-end="26059" vertical-scroll-proportion="0.02173913">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/TestCDA.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="49" selection-start="701" selection-end="701" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -920,7 +943,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/unit/com/ids/ccda/util/CDAMarkupBuilderTests.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="60" selection-start="3307" selection-end="3307" vertical-scroll-proportion="0.47791165">
+        <state line="96" column="60" selection-start="3307" selection-end="3307" vertical-scroll-proportion="0.83935744">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/TestCDA.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="49" selection-start="701" selection-end="701" vertical-scroll-proportion="0.051903114">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/mixins/Comment.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/unit/com/ids/ccda/templates/sections/body/AllergiesSectionTemplateTests.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="41" selection-start="1134" selection-end="1134" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#51#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/unit/com/ids/ccda/mixins/RequiredMapFieldsTests.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="85" selection-start="1562" selection-end="1562" vertical-scroll-proportion="0.84365326">
+          <folding>
+            <element signature="e#34#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/mixins/RequireMapFields.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="1" selection-start="781" selection-end="781" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/templates/sections/body/AllergiesSectionTemplate.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="45" selection-start="1315" selection-end="1315" vertical-scroll-proportion="0.49475262">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ids/ccda/Document.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="46" selection-start="523" selection-end="523" vertical-scroll-proportion="0.5955882">
           <folding />
         </state>
       </provider>

@@ -1,7 +1,7 @@
 package com.ids.ccda.templates.sections.body
 
 import com.ids.ccda.Document
-import com.ids.ccda.documents.ccd.Comment
+import com.ids.ccda.mixins.Comment
 import com.ids.ccda.documents.ccd.uid.DocUid
 import com.ids.ccda.oids.HL7_OID
 import groovy.xml.MarkupBuilder

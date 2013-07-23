@@ -33,4 +33,13 @@ public class AllergiesSectionTemplateTests {
         document.display()
         assertTrue(true)
     }
+
+    @Test
+    void testNullFlavors(){
+        document.map.allergies = [:]
+        template = new AllergiesSectionTemplate(document).builder
+        document.display()
+        assertTrue(true)
+
+    }
 }

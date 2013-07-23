@@ -1,19 +1,23 @@
 package com.ids.ccda.templates.sections.body
 
 import com.ids.ccda.Document
-import com.ids.ccda.documents.ccd.Comment
+import com.ids.ccda.mixins.Comment
+import com.ids.ccda.mixins.RequireMapFields
 import com.ids.ccda.documents.ccd.uid.DocUid
 import com.ids.ccda.oids.HL7_OID
 import groovy.xml.MarkupBuilder
 @Mixin(Comment)
+@Mixin(RequireMapFields)
 class AllergiesSectionTemplate  implements BodySectionTemplate {
     //TODO: make methods for effective time, statuses, and mapping of reaction
     public static final TITLE = "ALLERGIES, ADVERSE REACTIONS, ALERTS"
     public static final MAP_KEY = "allergies"
     public static final SECTION_CODE = [code:"48765-2", displayName:"Allergies, adverse reactions, alerts"] + HL7_OID.LOINC
     public static final ALLERGY_INTOLERANCE_CODE = [code:"ASSERTION",codeSystem:"2.16.840.1.113883.5.4"]
+    public static final NO_ENTRY_TEXT = "No known allergies"
 
     def ATTRS = [ "statusCode", "effectiveTimeLow", "effectiveTimeHigh", "reactionCode", "reactionName", "drugCode", "drugName" ]
+    def REQUIRED = [ "statusCode", "effectiveTimeLow", "effectiveTimeHigh", "reactionCode", "reactionName", "drugCode", "drugName" ]
     DocUid docUid
     MarkupBuilder builder
     Map map
@@ -24,8 +28,12 @@ class AllergiesSectionTemplate  implements BodySectionTemplate {
         this.docUid = doc.docUid
         this.map = doc.map
         this.allergies = this.map.allergies ?: [:]
+        requireForMaps( allergies, REQUIRED)
         generate()
     }
+
+
+
 
     def generate(){
       builder.mkp.comment(comment())
@@ -35,8 +43,12 @@ class AllergiesSectionTemplate  implements BodySectionTemplate {
               code( SECTION_CODE )
               title(TITLE)
               generateNormativeText()
-              allergies.each { id,allergy ->
-                generateEntry(id, allergy)
+              if(allergies){
+                allergies.each { id,allergy ->
+                  generateEntry(id, allergy)
+                }
+              } else {
+                generateNoEntry()
               }
           }
       }
@@ -63,6 +75,14 @@ class AllergiesSectionTemplate  implements BodySectionTemplate {
 
           }
       }
+    }
+
+    def generateNoEntry(){
+       builder.entry(typeCode:"DRIV"){
+           act(classCode:"ACT", moodCode: "EVN"){
+               text(NO_ENTRY_TEXT)
+           }
+       }
     }
 
     def generateEntry(allergyId,allergy = [:]){

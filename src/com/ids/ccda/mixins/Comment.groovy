@@ -1,4 +1,4 @@
-package com.ids.ccda.documents.ccd
+package com.ids.ccda.mixins
 
 class Comment {
     String comment(){
